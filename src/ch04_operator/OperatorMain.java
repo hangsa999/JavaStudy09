@@ -352,7 +352,9 @@ public class OperatorMain {
         // 리눅스에서 파일, 폴더의 권한을 설정하는 명령어인 chmod
 
         // 십진수 303 과 147 에 대해 비트연산자 &를 직접 해보기
-
+        int a303 = 100101111;
+        int a147 = 10010011;
+        System.out.println(a303 & a147);
 
 
 
