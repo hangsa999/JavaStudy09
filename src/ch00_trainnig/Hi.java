@@ -368,8 +368,64 @@ public class Hi {
 //          int ex33= Integer.parseInt(ex3);
 //
 //          System.out.println(ex11 + ex22 + ex33);
+//
+//        System.out.println("\n====================23.09.21.====================\n");
+//
+//        // 글자수 7자 이상 통과, 미만 탈락 만들기
+//        // '조건' ? 'b' : 'c'
+//        String inputId = "hangsa999";
+//        String check = (inputId.length() >= 7) ? "통과" : "탈락";
+//        System.out.println(check);
+//        // 괄호 생략 가능
+//        // String check = (inputId.length() >= 7) ? 1 : 0;
+//
+//        // 점수 구분
+//        // score = 90 이상 'A', 80 이상 'B', 그 외 'C'
+//        int score = 85;
+//        String grade = (score >= 90) ? "A" : (score >=80) ? "B" : "C";
+//        System.out.println(grade);
+//
+//        // 논리연산자
+//        // 조건 체크 한번에 해줌
 
+        // 회원가입, 이름 한글자 이상, 나이 만 14세 이상, 폰번호 11자리
+        String inputName = "지우";
+        int inputAge = 26;
+        String inputPhone = "01043945501";
 
+//        System.out.println(inputName.length() >= 1);
+//        System.out.println(inputAge - 1 >= 14);
+//        System.out.println(inputPhone.length() == 10);
+//        System.out.println(inputPhone.length() == 11);
+//
+//        // 논리연산자 AND
+//        // &&
+//        // 좌우 조건 모두 true 일 때만 리턴
+//        System.out.println(inputName.length() >= 1 && inputAge >= 14);
+//
+//        // 논리연산자 OR
+//        // ||
+//        // || 의 좌우측 조건 중 하나라도 true 일 때 true 리턴
+//        // 둘 다 false 일 때는 false 리턴
+//
+//        // 휴대폰번호는 10자리 또는 11자리 여야 한다.
+//        // x == 10 || x == 11
+//        System.out.println(inputPhone.length() == 10 || inputPhone.length() == 11);
+//        System.out.println(inputPhone.length() == 11 || inputPhone.length() == 10);
+//
+//        // 10 <= x <= 11
+//        // 10 <= x && x <= 11
+//        // 폰번 길이는 10보다 크거나 같고 11보다 작거나 같다
+//        System.out.println(10 <= inputPhone.length() && inputPhone.length() <= 11);
+//
+//        // ! 문
+//        // ! 를 boolean 타입 앞에 붙여주면 (true/false) 값을 뒤집는다.
+//
+//        // 이름은 1글자 이상 => 이름은 empty가 아니어야 한다.
+//        // name 이 empty 일 때 true 리턴
+//        // !inputName.isEmpty() = name 이 empty가 아니라면 true
+//        System.out.println(!inputName.isEmpty() && inputAge >= 14 &&
+//                (inputPhone.length() == 10 || inputPhone.length() == 11));
 
 
 
