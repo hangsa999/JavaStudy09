@@ -387,11 +387,11 @@ public class Hi {
 //
 //        // 논리연산자
 //        // 조건 체크 한번에 해줌
-
-        // 회원가입, 이름 한글자 이상, 나이 만 14세 이상, 폰번호 11자리
-        String inputName = "지우";
-        int inputAge = 26;
-        String inputPhone = "01043945501";
+//
+//        // 회원가입, 이름 한글자 이상, 나이 만 14세 이상, 폰번호 11자리
+//        String inputName = "지우";
+//        int inputAge = 26;
+//        String inputPhone = "01043945501";
 
 //        System.out.println(inputName.length() >= 1);
 //        System.out.println(inputAge - 1 >= 14);
@@ -426,6 +426,50 @@ public class Hi {
 //        // !inputName.isEmpty() = name 이 empty가 아니라면 true
 //        System.out.println(!inputName.isEmpty() && inputAge >= 14 &&
 //                (inputPhone.length() == 10 || inputPhone.length() == 11));
+
+        System.out.println("\n====================23.09.2.====================\n");
+
+        int sum10 = 1;
+        for (int i = 1; i <= 10; i++) {
+            sum10 += sum10 * i;
+            System.out.println(sum10);
+        }
+
+        long sum15 = 1;
+        for (long i = 1; i <= 15; i++) {
+            sum15 = sum15 * i;
+            System.out.println(sum15);
+        }
+
+        int count = 0;
+        String findWally = "윌리울리일리울리울리일리월리일리윌리월리울리일리일리월리일리윌리일리윌리일리월리월리윌리울리윌리울리일리울리울리윌리일리";
+        for (int i = 0; i < findWally.length() - 1; i++ ) {
+            if (findWally.substring(i, i + 2).equals("월리")) {
+                count += 1;
+            }
+        }
+        System.out.println("결과: " + count);
+
+        String stars = "*****"; // 5
+        for (int i = 0; i < stars.length(); i++) {
+            System.out.println(stars.substring(i,5));
+        }
+
+
+        String re = "로꾸꺼 로꾸꺼";
+
+        for (int i = 0; i < re.length(); i++) {
+            System.out.print(re.substring(6-i,7-i));
+        }
+
+
+
+
+
+
+
+
+
 
 
 
