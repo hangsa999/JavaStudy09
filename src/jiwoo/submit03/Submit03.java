@@ -48,6 +48,7 @@ public class Submit03 {
 
         for (int i = 0; i < stars.length(); i++) {
             System.out.println(stars.substring(i,5));
+            // 정석) System.out.println(stars.substring(i));
         }
 
         System.out.println("\n====================Q. 04=================\n");
@@ -74,7 +75,29 @@ public class Submit03 {
             System.out.print(word.substring((word.length() - 1) - i, word.length() - i));
         }
 
+        System.out.println("\n====================Q. 04_1=================\n");
 
+        String inputText = "내일부터 추석이당~";
+        // -> ~당이석추 터부일내
+        // ~ -> inputText.substring(9, 10)
+        // 당 -> inputText.substring(8, 9)
+        // 이 -> inputText.substring(7, 8)
+        // 내 -> inputText.substring(0, 1)
+        System.out.println(inputText.length());
+
+        String reverse = "";
+        for (int i = 0; i < inputText.length(); i++) {
+
+            reverse += inputText.substring((inputText.length() - 1) - i, inputText.length() - i);
+            System.out.println(i + ": " + reverse);
+
+        }
+
+        for (int i = 0; i < inputText.length(); i++) {
+            System.out.println(i + ": " + inputText.substring(i, i + 1));
+            reverse = inputText.substring(i, i + 1);
+            System.out.println(i + ": " + reverse);
+        }
 
 
     }
