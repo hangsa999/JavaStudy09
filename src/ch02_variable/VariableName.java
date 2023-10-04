@@ -41,7 +41,7 @@ public class VariableName {
     // 상수명 짓기
     // 단어 전부 대문자를 사용하며
     // 단어 사이에 언더바(_)를 붙여서 표기 (=스네이크 방식)
-    // 예:NEXT_IT_ADDRESS
+    // 예:NEXT_IT_ADDRESS절대
 
 
 }
