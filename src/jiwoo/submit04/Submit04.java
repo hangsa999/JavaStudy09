@@ -27,21 +27,26 @@ public class Submit04 {
                 break outer;
             } else {
                 int userNum = Integer.parseInt(user);
-                int aGab = Math.abs(userNum - A);
-                int bGab = Math.abs(userNum - B);
+                if (userNum > 10 || userNum < 1) {
+                    System.out.println("잘못 입력하셨습니다.");
+                } else {
+                    int aGab = Math.abs(userNum - A);
+                    int bGab = Math.abs(userNum - B);
 
-                System.out.println(user + "층에서 엘리베이터를 호출합니다.");
+                    System.out.println(user + "층에서 엘리베이터를 호출합니다.");
 
-                if (aGab < bGab) {
-                    A = userNum;
-                } else if (aGab == bGab && A > B) {
-                    A = userNum;
-                } else if (aGab > bGab) {
-                    B = userNum;
-                } else if (A < B) {
-                    B = userNum;
+                    if (aGab < bGab) {
+                        A = userNum;
+                    } else if (aGab == bGab && A > B) {
+                        A = userNum;
+                    } else if (aGab > bGab) {
+                        B = userNum;
+                    } else if (A < B) {
+                        B = userNum;
+                    }
                 }
             }
+
         } // while문 종료
 
     }

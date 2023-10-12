@@ -14,8 +14,7 @@ public class Submit05 {
         System.out.println("\n============Q.02============\n");
 
         String example = "로꾸꺼 로꾸꺼";
-        String result = reverseStr(example);
-        System.out.println(result);
+        reverseStr(example);
 
         System.out.println("\n============Q.03============\n");
 
@@ -51,48 +50,23 @@ public class Submit05 {
 
     }
 
-    public static String reverseStr(String str) {
-
-        String result = "";
+    public static void reverseStr(String str) {
 
         for (int i = 0; i < str.length(); i++) {
 
-            result += (str.substring((str.length() - 1) - i, str.length() - i));
+            System.out.print((str.substring((str.length() - 1) - i, str.length() - i)));
 
         }
 
         System.out.println();
 
-        return result;
-
     }
 
     public static String makeBinary(int tenNum) {
 
-//        String binary = Integer.toBinaryString(tenNum);
-//        return binary;
+        String binary = Integer.toBinaryString(tenNum);
 
-        String result = "";
-
-        while (true) {
-
-            result += tenNum % 2;
-
-            if (tenNum == 1) {
-
-                break;
-
-            } else {
-
-                tenNum /= 2;
-
-            }
-
-        }
-
-        result = reverseStr(result);
-
-        return result;
+        return binary;
 
     }
 
