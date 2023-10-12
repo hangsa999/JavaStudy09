@@ -52,7 +52,7 @@ public class CollectionSet {
 
         while (iterator.hasNext()) {
 
-            String  stu = iterator.next();
+            String stu = iterator.next();
 
             System.out.println(stu);
 
