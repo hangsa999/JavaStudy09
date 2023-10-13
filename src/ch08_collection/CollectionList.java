@@ -174,68 +174,68 @@ public class CollectionList {
         System.out.println(numList);
 
         System.out.println("\n============================================\n");
-
-        // 리스트의 복사
-        System.out.println(students);
-
-        ArrayList<String> copyStu = students;
-
-        System.out.println(students);
-        System.out.println(copyStu);
-
-        copyStu.add("6. 민재");
-
-        System.out.println(copyStu);
-        System.out.println(students);
-
-        ArrayList<String> copyList = new ArrayList<>(students);
-
-        // students 의 모든 요소가 copyList 에 담긴다.
-        copyList.addAll(students);
-
-        System.out.println("\n============================================\n");
-
-        // advanced  for 향상된 for문
-        // (특정 프로그래밍 언어에서는 이를 foreach문이라 한다)
-        for (int i = 0; i < students.size(); i++) {
-
-            System.out.println(students.get(i));
-
-        }
-
-        // ArrayList<Stirng>
-        for ( String stu : students ) {
-
-            System.out.println(stu);
-
-        }
-
-        // 인덱스가 존재하는 List 에서는 향상된 for문이 그렇게 크게
-        // 메리트가 있지는 않다. 그냥 딱 코드 살짝 압축되는 정도
-
-        System.out.println("\n============================================\n");
-
-        // 자바의 forEach문
-        students.forEach(new Consumer<String>(){
-
-            @Override
-            public void accept(String s) {
-
-                System.out.println(s);
-
-            }
-
-        });
-
-        // -> : 람다식 표현. 코드를 보다 간결하게 작성할 수 있다.
-        // 자바스크립트는 => 를 쓴다.
-        students.forEach(stu -> System.out.println(stu));
-
-        // 명령어가 2줄 이상인 경우 중괄호 사용
-        students.forEach(stu -> {
-            System.out.println(stu);
-            System.out.println(stu);
-        });
+//
+//        // 리스트의 복사
+//        System.out.println(students);
+//
+//        ArrayList<String> copyStu = students;
+//
+//        System.out.println(students);
+//        System.out.println(copyStu);
+//
+//        copyStu.add("6. 민재");
+//
+//        System.out.println(copyStu);
+//        System.out.println(students);
+//
+//        ArrayList<String> copyList = new ArrayList<>(students);
+//
+//        // students 의 모든 요소가 copyList 에 담긴다.
+//        copyList.addAll(students);
+//
+//        System.out.println("\n============================================\n");
+//
+//        // advanced  for 향상된 for문
+//        // (특정 프로그래밍 언어에서는 이를 foreach문이라 한다)
+//        for (int i = 0; i < students.size(); i++) {
+//
+//            System.out.println(students.get(i));
+//
+//        }
+//
+//        // ArrayList<Stirng>
+//        for ( String stu : students ) {
+//
+//            System.out.println(stu);
+//
+//        }
+//
+//        // 인덱스가 존재하는 List 에서는 향상된 for문이 그렇게 크게
+//        // 메리트가 있지는 않다. 그냥 딱 코드 살짝 압축되는 정도
+//
+//        System.out.println("\n============================================\n");
+//
+//        // 자바의 forEach문
+//        students.forEach(new Consumer<String>(){
+//
+//            @Override
+//            public void accept(String s) {
+//
+//                System.out.println(s);
+//
+//            }
+//
+//        });
+//
+//        // -> : 람다식 표현. 코드를 보다 간결하게 작성할 수 있다.
+//        // 자바스크립트는 => 를 쓴다.
+//        students.forEach(stu -> System.out.println(stu));
+//
+//        // 명령어가 2줄 이상인 경우 중괄호 사용
+//        students.forEach(stu -> {
+//            System.out.println(stu);
+//            System.out.println(stu);
+//        });
 
 
 

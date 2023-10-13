@@ -59,27 +59,88 @@ public class Submit08 {
 
         Scanner scan = new Scanner(System.in);
 
-        System.out.println("아이디를 입력해주세요.");
-        System.out.print(">>> ");
-        String id = scan.nextLine();
+        while (true) {
+            System.out.println("아이디를 입력해주세요.");
+            System.out.print(">>> ");
+            String id = scan.nextLine();
 
-        System.out.println("비밀번호를 입력해주세요.");
-        System.out.print(">>> ");
-        String password = scan.nextLine();
+            System.out.println("비밀번호를 입력해주세요.");
+            System.out.print(">>> ");
+            String password = scan.nextLine();
 
-        if (infoMap.containsKey(id) && infoMap.containsValue(password)) {
 
-            System.out.println("로그인 성공");
+//            if (infoMap.get(id) != null) {
+//                if (infoMap.get(id).equals(password)) {
+//                    System.out.println("로그인 성공");
+//                    break;
+//                }
+//            } else if () {
+//
+//            } else {
+//                System.out.println("존재하지 않는 아이디입니다.");
+//            }
 
-        } else if (!infoMap.containsKey(id)) {
-
-            System.out.println("존재하지 않는 아이디입니다.");
-
-        } else if (infoMap.containsKey(id) && !infoMap.containsValue(password)) {
-
-            System.out.println("비밀번호가 틀렸습니다.");
+            if (password.equals(infoMap.get(id))) {
+                // 로그인 성공
+                System.out.println("로그인 성공");
+                break;
+            } else {
+                System.out.println("아이디 혹은 비밀번호가 틀립니다.");
+            }
 
         }
+
+
+
+
+//
+//            if (infoMap.containsKey(id) && infoMap.containsValue(password)) {
+//
+//                System.out.println("로그인 성공");
+//
+//            } else if (!infoMap.containsKey(id)) {
+//
+//                System.out.println("존재하지 않는 아이디입니다.");
+//
+//            } else if (infoMap.containsKey(id) && !infoMap.containsValue(password)) {
+//
+//                System.out.println("비밀번호가 틀렸습니다.");
+//
+//            }
+
+//        System.out.println("\n==================== Q.02 ====================\n");
+//
+//        // 로또를 몇장 구메헤애 딩첨이 될까?
+//        // 로또 시뮬레이션
+//        int[] winLotto = {11, 21, 22, 30, 39, 44};
+//
+//        long num = 0;
+//
+//        while (true) {
+//            // 로또 한장 구매
+//            ArrayList<Integer> lotto = makeLotto();
+//            num++;
+//            int count = 0;
+//            // winLotto와 lotto의 숫자 6개가 일치하는지 확인
+//            // winLotto와 lotto의 각 인덱스 자리의 숫자가 일치하는 개수 카운트
+//            for (int i = 0; i < 6; i++) {
+//                if (Objects.equals(lotto.get(i), makeLotto().get(i))) {
+//                    count++;
+//                }
+//            }
+//
+//            //카운트한 숫자가 6개면 당첨
+//            if (count == 6) {
+//                System.out.println("당첨!");
+//                System.out.println(num + "회 구매");
+//                System.out.println((num*1000) + "원 씀");
+//                break;
+//            } else {
+//                System.out.println(count + "개 맞춤. 현재 " + num + "회 구매");
+//            }
+//        }
+
+
 
     }   // main 종료
 

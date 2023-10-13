@@ -1,4 +1,4 @@
-package ch09_class.nextit;
+package ch09_class.nextit.nextit;
 
 public class NextStudent {
 

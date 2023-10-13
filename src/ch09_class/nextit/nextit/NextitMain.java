@@ -1,4 +1,6 @@
-package ch09_class.nextit;
+package ch09_class.nextit.nextit;
+
+import ch09_class.nextit.school.Student;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -325,6 +327,11 @@ public class NextitMain {
             return stuB.level - stuA.level;
         });
 
+        Student naruto = new Student();
+        System.out.println(naruto);
+//
+//        System.out.println(naruto.name);
+//        System.out.println(naruto);
     }   // main 종료
 
 }
