@@ -56,19 +56,20 @@ public class ProductMain {
             System.out.println(productList.get(i));
 
         }
+
         System.out.println("\n========================= TV =========================\n");
 
         // TV 인덱스 위치 찾기
         for (int i = 0; i < productList.size(); i++) {
+
             if (productList.get(i).getName().equals("TV")){
-                System.out.println(productList.get(i));
+
+                // 인덱스가 2이므로 2를 표시
+                System.out.println(i);
+
             }
 
         }
-
-
-
-
 
     } // main 종료
 

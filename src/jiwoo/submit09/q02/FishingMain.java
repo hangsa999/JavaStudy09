@@ -27,12 +27,6 @@ public class FishingMain {
         fishList.add(sung);
         fishList.add(da);
 
-//        for (int i = 0; i < fishList.size(); i++) {
-//
-//            System.out.println(fishList.get(i));
-//
-//        }
-
         Scanner scan = new Scanner(System.in);
 
         // 물고기 담을 가방
@@ -47,7 +41,6 @@ public class FishingMain {
             System.out.print(">>> ");
 
             int select = Integer.parseInt(scan.nextLine());
-
             int sum = 0;
 
             if (select == 1) {
@@ -60,6 +53,7 @@ public class FishingMain {
                 System.out.println(fishList.get(random).getName() + "을 잡았다!!");
 
             } else if (select == 2) {
+
                 System.out.println("내 가방 ====================");
 
                 // 잡은 물고기 목록 보기
@@ -79,7 +73,9 @@ public class FishingMain {
 
                 // 종료
                 System.out.println("낚시를 멈췄습니다.");
+
                 break;
+
             }
 
         }

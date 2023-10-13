@@ -1,19 +1,19 @@
 package jiwoo.submit09.q02;
 
 public class Fish {
-    @Override
-    public String toString() {
-        return "[" + name +
-                ", 가치: " + price +
-                ']';
-    }
-
     String name;
     int price;
 
     public Fish (String name, int price) {
         this.name = name;
         this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "[" + name +
+                ", 가치: " + price +
+                ']';
     }
 
     public int getPrice() {
