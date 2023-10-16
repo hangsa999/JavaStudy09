@@ -1,6 +1,6 @@
-package ch09_class.nextit.nextit;
+package ch09_class.nextit;
 
-import ch09_class.nextit.school.Student;
+import ch09_class.school.Student;
 
 import java.util.ArrayList;
 import java.util.Collections;

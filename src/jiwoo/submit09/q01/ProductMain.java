@@ -1,7 +1,5 @@
 package jiwoo.submit09.q01;
 
-import ch09_class.nextit.school.Student;
-
 import java.util.ArrayList;
 
 public class ProductMain {

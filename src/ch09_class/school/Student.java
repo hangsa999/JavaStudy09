@@ -1,6 +1,6 @@
-package ch09_class.nextit.school;
+package ch09_class.school;
 
-import ch09_class.nextit.common.UtilClass;
+import ch09_class.common.UtilClass;
 
 public class Student {
     // 필드변수를 private로 두고

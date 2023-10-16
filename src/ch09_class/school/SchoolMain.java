@@ -1,12 +1,8 @@
-package ch09_class.nextit.school;
+package ch09_class.school;
 
-import ch09_class.nextit.common.UtilClass;
-import ch09_class.nextit.nextit.NextStudent;
-import com.sun.jdi.ObjectCollectedException;
+import ch09_class.common.UtilClass;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 
 public class SchoolMain {
 

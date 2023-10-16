@@ -1,4 +1,4 @@
-package ch09_class.nextit.common;
+package ch09_class.common;
 
 // 유용한 함수들을 제공하는 클래스
 public class UtilClass {
@@ -15,6 +15,19 @@ public class UtilClass {
     }
     return (double)Math.round(num * one) / one;
 }
+
+    /**
+     * a부터 b사이의 랜덤 정수를 리턴하는 메소드
+     * @param a 시작 정수
+     * @param b 최대 정수
+     * @return 정수 리턴
+     */
+    public static int makeRandom(int a, int b) {
+
+        return (int)((Math.random() * b-a+1) + 1);
+
+    }
+
 
 
 }

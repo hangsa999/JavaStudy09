@@ -1,6 +1,7 @@
 package jiwoo.submit09.q02;
 
-import java.lang.reflect.Array;
+import ch09_class.common.UtilClass;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -32,6 +33,12 @@ public class FishingMain {
         // 물고기 담을 가방
         ArrayList<Fish> fishBag = new ArrayList<>();
 
+        // 낚싯대의 상태
+        boolean isBroken = false;
+
+        // 미끼의 개수
+        int count = 10; // 낚시를 할 때마다 미끼가 1개씩 줄고 미끼가 0개면 낚시 불가능
+
         int random = 0;
 
         while (true) {
@@ -42,15 +49,82 @@ public class FishingMain {
 
             int select = Integer.parseInt(scan.nextLine());
             int sum = 0;
-
+            int idx = 0;
             if (select == 1) {
 
-                // 낚시하기
-                random = (int)(Math.random() * 7);
+                int randNum = UtilClass.makeRandom(1, 100);
 
-                fishBag.add(fishList.get(random));
+                if (randNum <= 5) {
 
-                System.out.println(fishList.get(random).getName() + "을 잡았다!!");
+                    // 낚시대가 부러짐
+                    System.out.println("낚싯대가 부러졌다....");
+
+                    isBroken = true;
+
+                    continue;
+
+                }
+
+                if (isBroken) {
+
+                    System.out.println("낚싯대가 부러져 낚시를 할 수 없다...");
+
+                    continue;
+
+                }
+
+                if (count == 0) {
+
+                    System.out.println("미끼가 없습니다..");
+
+                    continue;
+
+                }
+
+                // 낚시하기`
+                // 다금바리 5%
+                // 능성어 10% 확률
+
+                // 돌돔 12% 확률
+                // 참돔 13% 확률
+                // 우럭 15%
+                // 광어 15%
+                // 고등어 30%
+                random = (int)(Math.random() * 100);
+
+                if (random < 5 ) {
+
+                    idx = 6;
+
+                } else if (random < 15) {
+
+                    idx = 5;
+
+                } else if (random < 27) {
+
+                    idx = 4;
+
+                } else if (random < 40) {
+
+                    idx = 3;
+
+                } else if (random < 55) {
+
+                    idx = 2;
+
+                } else if (random < 70) {
+
+                    idx = 1;
+
+                }
+
+                fishBag.add(fishList.get(idx));
+
+                count--;
+
+                System.out.println(fishList.get(idx).getName() + "을 잡았다!!");
+
+                System.out.println("남은 미끼: " + count);
 
             } else if (select == 2) {
 
@@ -75,6 +149,10 @@ public class FishingMain {
                 System.out.println("낚시를 멈췄습니다.");
 
                 break;
+
+            } else {
+
+                System.out.println("잘못 입력하셨습니다.");
 
             }
 
