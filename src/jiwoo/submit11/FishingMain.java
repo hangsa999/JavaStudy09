@@ -278,6 +278,7 @@ public class FishingMain {
             }
 
 
+            // 장비강화, 장비강화에 따른 물고기 확률 조정, 실패확률 조정
 
 
 
