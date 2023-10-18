@@ -3,6 +3,7 @@ package jiwoo.submit11;
 import ch09_class.common.UtilClass;
 import jiwoo.submit09.q02.Fish;
 
+import java.time.Year;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -12,13 +13,13 @@ public class FishingMain {
 
         // 생선 길이는 나중에 랜덤값으로 넣어보기
         // 민물고기 객체
-        Fish fOne = new Fish("붕어", 10000);
-        Fish fTwo = new Fish("잉어", 20000);
-        Fish fThree = new Fish("가물치", 30000);
+        Fish fOne = new Fish("붕어", 1200);
+        Fish fTwo = new Fish("잉어", 2400);
+        Fish fThree = new Fish("가물치", 3200);
         // 바다물고기 객체
-        Fish sOne = new Fish("바다원", 12000);
-        Fish sTwo = new Fish("바다투", 22000);
-        Fish sThree = new Fish("바다쓰리", 32000);
+        Fish sOne = new Fish("바다원", 1200);
+        Fish sTwo = new Fish("바다투", 2300);
+        Fish sThree = new Fish("바다쓰리", 3100);
 
         // 빈 리스트 만들기
         ArrayList<Fish> fishList = new ArrayList<>();
@@ -60,7 +61,6 @@ public class FishingMain {
             System.out.println("[1] 지역 선택 | [2] 장비 강화 | [3] 상점 | [4] 가방 | [5] 나가기");
             System.out.print(">>> ");
 
-
             int select = Integer.parseInt(scan.nextLine());
             int sum = 0;
             int idx = 0;
@@ -83,14 +83,14 @@ public class FishingMain {
                         if (select == 1) {
                             if (bait > 0) {
                                 int randNum = UtilClass.makeRandom(1, 100);
-                                if (randNum < 50) {
+                                if (randNum < 50 - fishFloat) {
                                     idx = 0;
                                     fishBag.add(fishList.get(idx));
                                     bagMoney = bagMoney + fishList.get(idx).getPrice();
                                     System.out.println(fishList.get(idx).getName() + "을(를) 잡았다!");
                                     bait--;
                                     System.out.println("남은 미끼: " + bait);
-                                } else if (randNum < 80) {
+                                } else if (randNum < 70- fishFloat) {
                                     idx = 1;
                                     fishBag.add(fishList.get(idx));
                                     bagMoney = bagMoney + fishList.get(idx).getPrice();
@@ -152,7 +152,7 @@ public class FishingMain {
                         if (select == 1) {
                             if (bait > 0) {
                                 int randNum = UtilClass.makeRandom(1, 100);
-                                if (randNum < 50) {
+                                if (randNum < 50 - fishFloat) {
                                     idx = 3;
                                     fishBag.add(fishList.get(idx));
                                     bagMoney = bagMoney + fishList.get(idx).getPrice();
@@ -219,10 +219,49 @@ public class FishingMain {
                 }
 
             } else if (select == 2) {   // 장비 강화
-                System.out.println("장비 강화");
-                System.out.println("[1] 낚싯대 강화 | [2] 찌 강화 | [3] 나가기");
-                System.out.print(">>> ");
-                select = Integer.parseInt(scan.nextLine());
+
+                while (true) {
+                    System.out.println("장비 강화");
+                    System.out.println("[1] 낚싯대 강화 | [2] 찌 강화 | [3] 나가기");
+                    System.out.print(">>> ");
+                    select = Integer.parseInt(scan.nextLine());
+                    if (select == 1) {
+                        System.out.println("낚싯대 강화 " + "현재 +" + rod + "강");
+                        System.out.println("낚싯대를 강화하시겠습니까? (Y/N)");
+                        System.out.println("강화비: " + (10000 + 10000 * rod));
+                        System.out.print(">>> ");
+
+                        String yn;
+                        yn = String.valueOf(scan.nextLine());
+                        if (yn.equals("Y")) {   // 지갑에서 강화비를 빼고 rod = rod + 1
+                            myMoney = myMoney - 10000 - (10000 * rod);
+                            rod = rod + 1;
+                            System.out.println("강화 성공!");
+                            System.out.println("현재 낚싯대 강화 수치 " + rod + "강");
+                            System.out.println("지갑 잔액: " + myMoney);
+                        }
+
+                    } else if (select == 2) {
+                        System.out.println("찌 강화 " + "현재 +" + fishFloat + "강");
+                        System.out.println("찌를 강화하시겠습니까? (Y/N)");
+                        System.out.println("강화비: " + (10000 + 10000 * fishFloat));
+                        System.out.print(">>> ");
+
+                        String yn;
+                        yn = String.valueOf(scan.nextLine());
+                        if (yn.equals("Y")) {   // 지갑에서 강화비를 빼고 rod = rod + 1
+                            myMoney = myMoney - 10000 - (10000 * fishFloat);
+                            fishFloat = fishFloat + 1;
+                            System.out.println("강화 성공!");
+                            System.out.println("현재 찌 강화 수치 " + fishFloat + "강");
+                            System.out.println("지갑 잔액: " + myMoney);
+                        }
+
+
+                    }
+
+
+                }
 
             } else if (select == 3) {   // 상점 (구매: 떡밥 / 판매: 가방 내 물고기(일괄))
                 System.out.println("상점");
@@ -248,7 +287,6 @@ public class FishingMain {
                         System.out.println("현재 잔액: " + myMoney + "원");
                     }
 
-
                 } else if (select == 2) {   // 판매 기능
                     for (int i = 0; i < fishBag.size(); i++) {
                         sum += fishBag.get(i).getPrice();
@@ -259,8 +297,6 @@ public class FishingMain {
                     System.out.println("판매 완료");
                     System.out.println("소지 금액: " + myMoney + "원");
                 }
-
-
 
             } else if (select == 4) {   // 가방
                 System.out.println("내 가방");
