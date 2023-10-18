@@ -36,6 +36,7 @@ public class FishingMain {
         // 물고기 가방 (비어있는 새 목록 만들어서 도감이랑 통일, 상점 판매시 금액만큼 지갑에 추가하고 리스트에서 삭제)
 
         ArrayList<Fish> fishBag = new ArrayList<>();
+        ArrayList<Fish> bagMoney = new ArrayList<>();
 
         Scanner scan = new Scanner(System.in);
 
@@ -180,9 +181,9 @@ public class FishingMain {
                                     for (int i = 0; i < fishBag.size(); i++) {
                                         System.out.println(fishBag.get(i));
                                         // 잡은 물고기 가치 총액 구하기
-                                        sum += fishBag.get(i).getPrice();
+                                        bagMoney.add(fishBag.get(i));
                                     }
-                                    System.out.println("가방 합계: " + sum + "원");
+                                    System.out.println("가방 합계: " + bagMoney + "원");
                                     System.out.println("[1] 나가기");
                                     System.out.print(">>> ");
                                     select = Integer.parseInt(scan.nextLine());
@@ -199,8 +200,9 @@ public class FishingMain {
                             // 잡은 물고기 목록 보기
                             for (int i = 0; i < fishBag.size(); i++) {
                                 System.out.println(fishBag.get(i));
+                                bagMoney.add(fishBag.get(i));
                             }
-                            System.out.println("가방 합계: " + sum + "원");
+                            System.out.println("가방 합계: " + bagMoney + "원");
                         } else if (select == 3) {
                             break;
 
@@ -226,11 +228,14 @@ public class FishingMain {
                 if (select == 1) {
 
                 } else if (select == 2) {   // 판매 기능
-                    myMoney = myMoney + sum;
-                    sum = 0;
+                    for (int i = 0; i < bagMoney.size(); i++) {
+                        System.out.println(bagMoney.get(i).getPrice());
+                        sum += bagMoney.get(i).getPrice();
+                    }
                     fishBag.clear();
+                    bagMoney.clear();
                     System.out.println("판매 완료");
-                    System.out.println("소지 금액: " + myMoney + "원");
+                    System.out.println("소지 금액: " + sum + "원");
                 }
 
 
