@@ -2,9 +2,6 @@ package jiwoo.submit11;
 
 import ch09_class.common.UtilClass;
 import jiwoo.submit11.Fish;
-
-import javax.lang.model.util.ElementScanner6;
-import java.time.Year;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -15,19 +12,19 @@ public class FishingMain {
         // 생선 길이는 나중에 랜덤값으로 넣어보기
 
         // 강 물고기 객체 (26종)
-        Fish bitterling = new Fish("납줄개", 900, "강");
-        Fish paleChub = new Fish("피라미", 200, "강");
         Fish cruclanCarp = new Fish("붕어", 160, "강");
+        Fish bluegill = new Fish("블루길", 180, "강");
+        Fish paleChub = new Fish("피라미", 200, "강");
         Fish dace = new Fish("황어", 240, "강");
-        Fish softShelledTurtle = new Fish("자라", 3750, "강");
+        Fish yellowPerch = new Fish("옐로우퍼치", 180, "강");
         Fish freshwaterGoby = new Fish("동사리", 400, "강");
         Fish loach = new Fish("미꾸라지", 400, "강");
-        Fish bluegill = new Fish("블루길", 180, "강");
-        Fish yellowPerch = new Fish("옐로우퍼치", 180, "강");
         Fish blackBass = new Fish("큰입배스", 300, "강");
+        Fish pondSmelt = new Fish("빙어", 400, "강");
+        Fish bitterling = new Fish("납줄개", 900, "강");
+        Fish softShelledTurtle = new Fish("자라", 3750, "강");
         Fish tilapla = new Fish("틸라피아", 400, "강");
         Fish plke = new Fish("강꼬치고기", 1800, "강");
-        Fish pondSmelt = new Fish("빙어", 400, "강");
         Fish sweetFish = new Fish("은어", 900, "강");
         Fish mittenCrab = new Fish("참게", 2000, "강");
         Fish guppy = new Fish("구피", 1300, "강");
@@ -207,195 +204,34 @@ public class FishingMain {
 
                             if (bait > 0) {
 
-                                int randNum = UtilClass.makeRandom(1, 170 - rod);
+                                int randNum = UtilClass.makeRandom(1, 1100 - rod * 10); // 낚싯대 +1강할 때 마다 실패 확률 10/1100 감소 => +10강 시 낚시를 실패하지 않음
 
-                                if (randNum < 5) {
-                                    idx = 0;
-                                    fishBag.add(fishList.get(idx));
-                                    bagMoney = bagMoney + fishList.get(idx).getPrice();
-                                    System.out.println(fishList.get(idx).getName() + "을(를) 잡았다!");
-                                    bait--;
-                                    System.out.println("남은 미끼: " + bait);
-                                } else if (randNum < 12) {
-                                    idx = 1;
-                                    fishBag.add(fishList.get(idx));
-                                    bagMoney = bagMoney + fishList.get(idx).getPrice();
-                                    System.out.println(fishList.get(idx).getName() + "을(를) 잡았다!");
-                                    bait--;
-                                    System.out.println("남은 미끼: " + bait);
-                                } else if (randNum < 19) {
-                                    idx = 2;
-                                    fishBag.add(fishList.get(idx));
-                                    bagMoney = bagMoney + fishList.get(idx).getPrice();
-                                    System.out.println(fishList.get(idx).getName() + "을(를) 잡았다!");
-                                    bait--;
-                                    System.out.println("남은 미끼: " + bait);
-                                } else if (randNum < 25) {
-                                    idx = 3;
-                                    fishBag.add(fishList.get(idx));
-                                    bagMoney = bagMoney + fishList.get(idx).getPrice();
-                                    System.out.println(fishList.get(idx).getName() + "을(를) 잡았다!");
-                                    bait--;
-                                    System.out.println("남은 미끼: " + bait);
-                                } else if (randNum < 27) {
-                                    idx = 4;
-                                    fishBag.add(fishList.get(idx));
-                                    bagMoney = bagMoney + fishList.get(idx).getPrice();
-                                    System.out.println(fishList.get(idx).getName() + "을(를) 잡았다!");
-                                    bait--;
-                                    System.out.println("남은 미끼: " + bait);
-                                } else if (randNum < 28) {
-                                    idx = 5;
-                                    fishBag.add(fishList.get(idx));
-                                    bagMoney = bagMoney + fishList.get(idx).getPrice();
-                                    System.out.println(fishList.get(idx).getName() + "을(를) 잡았다!");
-                                    bait--;
-                                    System.out.println("남은 미끼: " + bait);
-                                } else if (randNum < 33) {
-                                    idx = 6;
-                                    fishBag.add(fishList.get(idx));
-                                    bagMoney = bagMoney + fishList.get(idx).getPrice();
-                                    System.out.println(fishList.get(idx).getName() + "을(를) 잡았다!");
-                                    bait--;
-                                    System.out.println("남은 미끼: " + bait);
-                                } else if (randNum < 38) {
-                                    idx = 7;
-                                    fishBag.add(fishList.get(idx));
-                                    bagMoney = bagMoney + fishList.get(idx).getPrice();
-                                    System.out.println(fishList.get(idx).getName() + "을(를) 잡았다!");
-                                    bait--;
-                                    System.out.println("남은 미끼: " + bait);
-                                } else if (randNum < 44) {
-                                    idx = 8;
-                                    fishBag.add(fishList.get(idx));
-                                    bagMoney = bagMoney + fishList.get(idx).getPrice();
-                                    System.out.println(fishList.get(idx).getName() + "을(를) 잡았다!");
-                                    bait--;
-                                    System.out.println("남은 미끼: " + bait);
-                                } else if (randNum < 50) {
-                                    idx = 9;
-                                    fishBag.add(fishList.get(idx));
-                                    bagMoney = bagMoney + fishList.get(idx).getPrice();
-                                    System.out.println(fishList.get(idx).getName() + "을(를) 잡았다!");
-                                    bait--;
-                                    System.out.println("남은 미끼: " + bait);
-                                } else if (randNum < 55) {
-                                    idx = 10;
-                                    fishBag.add(fishList.get(idx));
-                                    bagMoney = bagMoney + fishList.get(idx).getPrice();
-                                    System.out.println(fishList.get(idx).getName() + "을(를) 잡았다!");
-                                    bait--;
-                                    System.out.println("남은 미끼: " + bait);
-                                } else if (randNum < 60) {
-                                    idx = 11;
-                                    fishBag.add(fishList.get(idx));
-                                    bagMoney = bagMoney + fishList.get(idx).getPrice();
-                                    System.out.println(fishList.get(idx).getName() + "을(를) 잡았다!");
-                                    bait--;
-                                    System.out.println("남은 미끼: " + bait);
-                                } else if (randNum < 62) {
-                                    idx = 12;
-                                    fishBag.add(fishList.get(idx));
-                                    bagMoney = bagMoney + fishList.get(idx).getPrice();
-                                    System.out.println(fishList.get(idx).getName() + "을(를) 잡았다!");
-                                    bait--;
-                                    System.out.println("남은 미끼: " + bait);
-                                } else if (randNum < 67) {
-                                    idx = 13;
-                                    fishBag.add(fishList.get(idx));
-                                    bagMoney = bagMoney + fishList.get(idx).getPrice();
-                                    System.out.println(fishList.get(idx).getName() + "을(를) 잡았다!");
-                                    bait--;
-                                    System.out.println("남은 미끼: " + bait);
-                                } else if (randNum < 72) {
-                                    idx = 14;
-                                    fishBag.add(fishList.get(idx));
-                                    bagMoney = bagMoney + fishList.get(idx).getPrice();
-                                    System.out.println(fishList.get(idx).getName() + "을(를) 잡았다!");
-                                    bait--;
-                                    System.out.println("남은 미끼: " + bait);
-                                } else if (randNum < 74) {
-                                    idx = 15;
-                                    fishBag.add(fishList.get(idx));
-                                    bagMoney = bagMoney + fishList.get(idx).getPrice();
-                                    System.out.println(fishList.get(idx).getName() + "을(를) 잡았다!");
-                                    bait--;
-                                    System.out.println("남은 미끼: " + bait);
-                                } else if (randNum < 80) {
-                                    idx = 16;
-                                    fishBag.add(fishList.get(idx));
-                                    bagMoney = bagMoney + fishList.get(idx).getPrice();
-                                    System.out.println(fishList.get(idx).getName() + "을(를) 잡았다!");
-                                    bait--;
-                                    System.out.println("남은 미끼: " + bait);
-                                } else if (randNum < 82) {
-                                    idx = 17;
-                                    fishBag.add(fishList.get(idx));
-                                    bagMoney = bagMoney + fishList.get(idx).getPrice();
-                                    System.out.println(fishList.get(idx).getName() + "을(를) 잡았다!");
-                                    bait--;
-                                    System.out.println("남은 미끼: " + bait);
-                                } else if (randNum < 84) {
-                                    idx = 18;
-                                    fishBag.add(fishList.get(idx));
-                                    bagMoney = bagMoney + fishList.get(idx).getPrice();
-                                    System.out.println(fishList.get(idx).getName() + "을(를) 잡았다!");
-                                    bait--;
-                                    System.out.println("남은 미끼: " + bait);
-                                } else if (randNum < 89) {
-                                    idx = 19;
-                                    fishBag.add(fishList.get(idx));
-                                    bagMoney = bagMoney + fishList.get(idx).getPrice();
-                                    System.out.println(fishList.get(idx).getName() + "을(를) 잡았다!");
-                                    bait--;
-                                    System.out.println("남은 미끼: " + bait);
-                                } else if (randNum < 94) {
-                                    idx = 20;
-                                    fishBag.add(fishList.get(idx));
-                                    bagMoney = bagMoney + fishList.get(idx).getPrice();
-                                    System.out.println(fishList.get(idx).getName() + "을(를) 잡았다!");
-                                    bait--;
-                                    System.out.println("남은 미끼: " + bait);
-                                } else if (randNum < 96) {
-                                    idx = 21;
-                                    fishBag.add(fishList.get(idx));
-                                    bagMoney = bagMoney + fishList.get(idx).getPrice();
-                                    System.out.println(fishList.get(idx).getName() + "을(를) 잡았다!");
-                                    bait--;
-                                    System.out.println("남은 미끼: " + bait);
-                                } else if (randNum < 97) {
-                                    idx = 22;
-                                    fishBag.add(fishList.get(idx));
-                                    bagMoney = bagMoney + fishList.get(idx).getPrice();
-                                    System.out.println(fishList.get(idx).getName() + "을(를) 잡았다!");
-                                    bait--;
-                                    System.out.println("남은 미끼: " + bait);
-                                } else if (randNum < 98) {
-                                    idx = 23;
-                                    fishBag.add(fishList.get(idx));
-                                    bagMoney = bagMoney + fishList.get(idx).getPrice();
-                                    System.out.println(fishList.get(idx).getName() + "을(를) 잡았다!");
-                                    bait--;
-                                    System.out.println("남은 미끼: " + bait);
-                                } else if (randNum < 99) {
-                                    idx = 24;
-                                    fishBag.add(fishList.get(idx));
-                                    bagMoney = bagMoney + fishList.get(idx).getPrice();
-                                    System.out.println(fishList.get(idx).getName() + "을(를) 잡았다!");
-                                    bait--;
-                                    System.out.println("남은 미끼: " + bait);
-                                } else if (randNum < 100) {
-                                    idx = 25;
-                                    fishBag.add(fishList.get(idx));
-                                    bagMoney = bagMoney + fishList.get(idx).getPrice();
-                                    System.out.println(fishList.get(idx).getName() + "을(를) 잡았다!");
-                                    bait--;
-                                    System.out.println("남은 미끼: " + bait);
-                                } else if (randNum > 110 && randNum < 120) {     // 민물 낚시 실패 (기본 10% ~ 낚싯대 강화 수치마다 1% 감소)
+                                if (randNum <= 250 - fishFloat) { // 1000원 미만 강 물고기
+                                    randNum = UtilClass.makeRandom(0, 13);
+
+
+                                } else if (randNum <= 500 - fishFloat*2 && randNum > 250 - fishFloat) { // 1000~2000 사이 강 물고기
+
+
+                                } else if (randNum <= 700 - fishFloat*3 && randNum > 500 - fishFloat*2) { // 2000~3000원 사이 강 물고기
+
+
+                                } else if (randNum <= 870 - fishFloat*4 && randNum > 700 - fishFloat*3) { // 3000~4000원 사이 강 물고기
+
+
+                                } else if (randNum <= 980 - fishFloat*5 && randNum > 870 - fishFloat*4) { // 4000~5000원 사이 강 물고기
+
+
+                                } else if (randNum <= 1000 && randNum > 980 - fishFloat) { // 희귀 강 물고기
+
+
+                                } else if (randNum <= 1100 && randNum > 1000) { // 낚시 실패
                                     System.out.println("물고기가 도망갔습니다...");
                                     bait--;
                                     System.out.println("남은 미끼: " + bait);
+
                                 }
+
                             } else if (bait == 0) {    // 떡밥 없을 때 민물 가방 확인
                                 System.out.println("미끼가 없습니다..");
                                 System.out.println("[1] 가방 확인 | [2] 나가기");
@@ -712,7 +548,7 @@ public class FishingMain {
                             System.out.println("내 가방");
                             // 잡은 물고기 목록 보기
                             for (int i = 0; i < fishBag.size(); i++) {
-                                System.out.println(fishBag.get(i));
+                                System.out.println(fishBag.get(i).getName());
                             }
                             System.out.println("가방 합계: " + bagMoney + "원");
                         } else if (select == 3) {
@@ -849,5 +685,6 @@ public class FishingMain {
         } // while 종료
 
     } // main 종료
+
 
 } // class 종료

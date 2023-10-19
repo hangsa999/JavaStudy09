@@ -16,12 +16,9 @@ public class Fish {
 
     @Override
     public String toString() {
-        return "Fish{" +
-                "name='" + name + '\'' +
-                ", price=" + price +
-                ", field='" + field + '\'' +
-                '}';
+        return "[" + name + ", " + price + "원]";
     }
+
 
 
 
