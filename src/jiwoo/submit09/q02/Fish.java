@@ -1,8 +1,8 @@
 package jiwoo.submit09.q02;
 
 public class Fish {
-    String name;
-    int price;
+    private String name;
+    private int price;
 
 
     public Fish (String name, int price) {
