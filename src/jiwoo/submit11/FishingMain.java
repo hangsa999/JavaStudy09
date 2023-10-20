@@ -637,7 +637,6 @@ public class FishingMain {
                                 }
 
 
-
                             } else if (select == 2 && bait == 0) {
                                 System.out.println("");
                                 System.out.println("떡밥이 없습니다...");
@@ -666,10 +665,7 @@ public class FishingMain {
                                     break river;
                                 }
 
-                            }
-
-
-                            else if (select == 3) { // 잡은 물고기 목록 보기
+                            } else if (select == 3) { // 잡은 물고기 목록 보기
                                 System.out.println("");
                                 System.out.println("==== 내 가방 ====");
                                 for (int i = 0; i < fishBag.size(); i++) {
@@ -943,8 +939,6 @@ public class FishingMain {
                                 }
 
 
-
-
                             } else if (select == 3) { // 바다 가방 확인
                                 System.out.println("");
                                 System.out.println("==== 내 가방 ====");
@@ -1148,6 +1142,10 @@ public class FishingMain {
             } else {
                 System.out.println("잘못 입력하셨습니다.");
             }
+
+            // 엔딩 이후 물고기 잡은 수, 떡밥 사용 수, 번 돈, 강화비용 등
+            // if문 switch문으로 변환할 수 있게 해보기
+
 
         } // while 종료
 
