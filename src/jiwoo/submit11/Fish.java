@@ -46,4 +46,17 @@ public class Fish {
     public void setField(String field) {
         this.field = field;
     }
+
+    public static int makeRandom(int a, int b) {
+
+        return (int)((Math.random() * (b-a+1) )+a);
+        // 20,40 = ?
+        // (int)((Math.random() * 40-20+1)+20); => 20부터 40까지
+        // 17, 17 = ??
+        // (int)((Math.random() * 17-17+1)+17); => 17부터 17까지
+        // 1, 1100 = ???
+        // (int)((Math.random() * 1100 - 1 + 1)+1); => 1부터 1100까지
+        // 22, 26 = ?
+        // (int)((Math.random() * 26 - 22 + 1)+22); => 22부터 26까지
+    }
 }

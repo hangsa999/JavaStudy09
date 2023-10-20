@@ -1,10 +1,8 @@
 <component name="ArtifactManager">
-  <artifact name="JavaStudy:jar">
-    <output-path>D:/</output-path>
-    <root id="root">
-      <element id="archive" name="JavaStudy.jar">
-        <element id="module-output" name="JavaStudy" />
-      </element>
+  <artifact type="jar" name="JavaStudy:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/JavaStudy_jar</output-path>
+    <root id="archive" name="JavaStudy.jar">
+      <element id="module-output" name="JavaStudy" />
     </root>
   </artifact>
 </component>
