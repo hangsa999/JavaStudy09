@@ -36,8 +36,8 @@ public class FishingMain {
         // 낚싯대의 상태
         boolean isBroken = false;
 
-        // 미끼의 개수
-        int count = 10; // 낚시를 할 때마다 미끼가 1개씩 줄고 미끼가 0개면 낚시 불가능
+        // 떡밥의 개수
+        int count = 10; // 낚시를 할 때마다 떡밥가 1개씩 줄고 떡밥가 0개면 낚시 불가능
 
         int random = 0;
 
@@ -75,7 +75,7 @@ public class FishingMain {
 
                 if (count == 0) {
 
-                    System.out.println("미끼가 없습니다..");
+                    System.out.println("떡밥가 없습니다..");
 
                     continue;
 
@@ -124,7 +124,7 @@ public class FishingMain {
 
                 System.out.println(fishList.get(idx).getName() + "을 잡았다!!");
 
-                System.out.println("남은 미끼: " + count);
+                System.out.println("남은 떡밥: " + count);
 
             } else if (select == 2) {
 

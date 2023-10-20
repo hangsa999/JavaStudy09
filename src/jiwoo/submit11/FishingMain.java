@@ -193,10 +193,11 @@ public class FishingMain {
         // 보유 금액
         int myMoney = 0;
 
-        fishing : while (true) {
+        fishing:
+        while (true) {
 
             System.out.println("무엇을 할까?");
-            System.out.println("[1] 지역 선택 | [2] 장비 강화 | [3] 상점 | [4] 가방 | [5] 나가기");
+            System.out.println("[1] 낚시터 선택 | [2] 장비 강화 | [3] 상점 | [4] 가방 | [5] 종료");
             System.out.print(">>> ");
 
             int select = Integer.parseInt(scan.nextLine());
@@ -210,22 +211,23 @@ public class FishingMain {
                     // 히든 지역!!!
                     System.out.println("절벽 위 낚시 포인트를 발견했다!");
                     System.out.println("한 번 올라가보자");
-                    Thread.sleep(1000);
+                    Thread.sleep(300);
                     System.out.print(".");
-                    Thread.sleep(1000);
+                    Thread.sleep(300);
                     System.out.print(".");
-                    Thread.sleep(1000);
+                    Thread.sleep(300);
                     System.out.print(".");
-                    Thread.sleep(1000);
+                    Thread.sleep(300);
                     System.out.print(".");
-                    Thread.sleep(1000);
+                    Thread.sleep(300);
                     System.out.print(".");
-                    Thread.sleep(1000);
+                    Thread.sleep(300);
                     System.out.print(".");
-                    Thread.sleep(1000);
+                    Thread.sleep(300);
                     System.out.println("절벽 위에 도착했다!");
                     System.out.println("낚시를 해 볼까?");
-                    hidden : while (true) {
+                    hidden:
+                    while (true) {
 
                         System.out.println("[1] 낚시하기 | [2] 가방 확인 | [3] 나가기");
                         System.out.print(">>> ");
@@ -242,71 +244,71 @@ public class FishingMain {
                                     bagMoney = bagMoney + fishList.get(61).getPrice();
                                     System.out.println(fishList.get(61).getName() + "를 잡았다!");
                                     bait--;
-                                    System.out.println("남은 미끼: " + bait + "개");
+                                    System.out.println("남은 떡밥: " + bait + "개");
                                 } else if (randNum <= 60) {
                                     fishBag.add(fishList.get(62));
                                     bagMoney = bagMoney + fishList.get(62).getPrice();
                                     System.out.println(fishList.get(62).getName() + "를 잡았다!");
                                     bait--;
-                                    System.out.println("남은 미끼: " + bait + "개");
+                                    System.out.println("남은 떡밥: " + bait + "개");
                                 } else if (randNum <= 75) {
                                     fishBag.add(fishList.get(63));
                                     bagMoney = bagMoney + fishList.get(63).getPrice();
-                                    System.out.println(fishList.get(63).getName() + "를 잡았다!");
+                                    System.out.println("[희귀] " + fishList.get(63).getName() + "를 잡았다!");
                                     bait--;
-                                    System.out.println("남은 미끼: " + bait + "개");
+                                    System.out.println("남은 떡밥: " + bait + "개");
                                 } else if (randNum <= 90) {
                                     fishBag.add(fishList.get(64));
                                     bagMoney = bagMoney + fishList.get(64).getPrice();
-                                    System.out.println(fishList.get(64).getName() + "를 잡았다!");
+                                    System.out.println("[희귀] " + fishList.get(64).getName() + "를 잡았다!");
                                     bait--;
-                                    System.out.println("남은 미끼: " + bait + "개");
+                                    System.out.println("남은 떡밥: " + bait + "개");
 
                                     // 엔딩 물고기
                                 } else if (randNum > 90) { // else로 해도 되지만 게임의 엔딩이니까 그냥 값을 다 넣음
                                     System.out.print("저항이 거세다");
-                                    Thread.sleep(1000);
+                                    Thread.sleep(300);
                                     System.out.print(".");
-                                    Thread.sleep(1000);
+                                    Thread.sleep(300);
                                     System.out.print(".");
-                                    Thread.sleep(1000);
+                                    Thread.sleep(300);
                                     System.out.print(".");
-                                    Thread.sleep(1000);
+                                    Thread.sleep(300);
                                     System.out.println("!");
-                                    Thread.sleep(1000);
+                                    Thread.sleep(300);
                                     System.out.print(".");
-                                    Thread.sleep(1000);
+                                    Thread.sleep(300);
                                     System.out.print(".");
-                                    Thread.sleep(1000);
+                                    Thread.sleep(300);
                                     System.out.print(".");
-                                    Thread.sleep(1000);
+                                    Thread.sleep(300);
                                     System.out.print(".");
-                                    Thread.sleep(1000);
+                                    Thread.sleep(300);
                                     System.out.print(".");
-                                    Thread.sleep(1000);
+                                    Thread.sleep(300);
                                     System.out.println(".");
                                     System.out.print("낚싯대가 부러질 것 같다");
-                                    Thread.sleep(1000);
+                                    Thread.sleep(300);
                                     System.out.print(".");
-                                    Thread.sleep(1000);
+                                    Thread.sleep(300);
                                     System.out.print(".");
-                                    Thread.sleep(1000);
+                                    Thread.sleep(300);
                                     System.out.print(".");
-                                    Thread.sleep(1000);
+                                    Thread.sleep(300);
                                     System.out.println("!");
-                                    Thread.sleep(1000);
+                                    Thread.sleep(300);
                                     System.out.print(".");
-                                    Thread.sleep(1000);
+                                    Thread.sleep(300);
                                     System.out.print(".");
-                                    Thread.sleep(1000);
+                                    Thread.sleep(300);
                                     System.out.print(".");
-                                    Thread.sleep(1000);
+                                    Thread.sleep(300);
                                     System.out.print(".");
-                                    Thread.sleep(1000);
+                                    Thread.sleep(300);
                                     System.out.print(".");
-                                    Thread.sleep(1000);
+                                    Thread.sleep(300);
                                     System.out.println(".");
-                                    Thread.sleep(1000);
+                                    Thread.sleep(3000);
                                     fishBag.add(fishList.get(65));
                                     bagMoney = bagMoney + fishList.get(65).getPrice();
                                     System.out.println(fishList.get(65).getName() + "를 잡았다!");
@@ -315,39 +317,45 @@ public class FishingMain {
 
 
                             } else if (bait == 0) { // 떡밥 없을 때 낚시 시도 시
-                                    System.out.println("미끼가 없습니다...");
-                                    System.out.println("[1] 가방 확인 | [2] 나가기");
-                                    select = Integer.parseInt(scan.nextLine());
+                                System.out.println("떡밥가 없습니다...");
+                                System.out.println("[1] 가방 확인 | [2] 나가기");
+                                select = Integer.parseInt(scan.nextLine());
 
-                                    // 떡밥 없을 때 가방 확인
-                                    if (select == 1) {
-                                        System.out.println("내 가방");
-                                        for (int i = 0; i < fishBag.size(); i++) {
-                                            System.out.println(fishBag.get(i));
-                                        }
-                                       System.out.println("잡은 물고기: " + fishBag.size() + "마리");
-                                        System.out.println("가방 내 물고기 총액: " + bagMoney + "원");
-                                        System.out.println("남은 미끼: " + bait + "개");
-                                        System.out.println("[1] 나가기.");
-                                        select = Integer.parseInt(scan.nextLine());
-                                        if (select == 1) {
-                                            break hidden;
-                                        }
-                                    } else if (select == 2) {
-                                        break hidden;
+                                // 떡밥 없을 때 가방 확인
+                                if (select == 1) {
+                                    System.out.println("내 가방");
+                                    for (int i = 0; i < fishBag.size(); i++) {
+                                        System.out.println(fishBag.get(i));
                                     }
+                                    System.out.println("잡은 물고기: " + fishBag.size() + "마리");
+                                    System.out.println("가방 내 물고기 총액: " + bagMoney + "원");
+                                    System.out.println("남은 떡밥: " + bait + "개");
+                                    System.out.println("[1] 나가기.");
+                                    select = Integer.parseInt(scan.nextLine());
+                                    if (select == 1) {
+                                        break hidden;
+                                    } else {
+                                        System.out.println("잘못 입력하셨습니다.");
+                                    }
+                                } else if (select == 2) {
+                                    break hidden;
+                                }
 
                             } else if (select == 2) {   // 잡은 물고기 목록 보기
                                 System.out.println("내 가방");
                                 for (int i = 0; i < fishBag.size(); i++) {
-                                System.out.println(fishBag.get(i));
+                                    System.out.println(fishBag.get(i));
                                 }
                                 System.out.println("잡은 물고기: " + fishBag.size() + "마리");
                                 System.out.println("가방 내 물고기 총액: " + bagMoney + "원");
-                                System.out.println("남은 미끼: " + bait + "개");
+                                System.out.println("남은 떡밥: " + bait + "개");
                             } else if (select == 3) {
                                 break;
+                            } else {
+                                System.out.println("잘못 입력하셨습니다");
                             }
+
+
                         } else if (select == 2) {
                             System.out.println("내 가방");
                             for (int i = 0; i < fishBag.size(); i++) {
@@ -355,14 +363,13 @@ public class FishingMain {
                             }
                             System.out.println("잡은 물고기: " + fishBag.size() + "마리");
                             System.out.println("가방 내 물고기 총액: " + bagMoney + "원");
-                            System.out.println("남은 미끼: " + bait + "개");
+                            System.out.println("남은 떡밥: " + bait + "개");
                         } else if (select == 3) {
-                            break;
+                            break hidden;
                         } else {
                             System.out.println("잘못 입력하셨습니다.");
                         }
-
-                    }
+                    } // 절벽 낚시 종료
 
 
                 } else {        // 낚싯대, 찌가 풀강이 아닐 때, 일반 낚시터만 보여줌
@@ -376,9 +383,10 @@ public class FishingMain {
 
                         System.out.println("강 낚시터에 입장하셨습니다.");
 
-                        river : while (true) {
+                        river:
+                        while (true) {
 
-                            System.out.println("[1] 낚시하기 | [2] 가방 확인 | [3] 나가기");
+                            System.out.println("[1] 낚시하기 | [2] 자동 낚시 | [3] 가방 확인 | [4] 나가기");
                             System.out.print(">>> ");
                             select = Integer.parseInt(scan.nextLine());
 
@@ -396,7 +404,7 @@ public class FishingMain {
                                         bagMoney = bagMoney + fishList.get(fishNum).getPrice();
                                         System.out.println(fishList.get(fishNum).getName() + " 을(를) 잡았다!");
                                         bait--;
-                                        System.out.println("남은 미끼: " + bait + "개");
+                                        System.out.println("남은 떡밥: " + bait + "개");
                                         // 1000 이상 ~ 2000 미만
                                     } else if (randNum <= 500 - fishFloat * 2 && randNum > 250 - fishFloat) {
                                         fishNum = UtilClass.makeRandom(14, 16);
@@ -404,7 +412,7 @@ public class FishingMain {
                                         bagMoney = bagMoney + fishList.get(fishNum).getPrice();
                                         System.out.println(fishList.get(fishNum).getName() + " 을(를) 잡았다!");
                                         bait--;
-                                        System.out.println("남은 미끼: " + bait + "개");
+                                        System.out.println("남은 떡밥: " + bait + "개");
 
                                         // 2000 이상 ~ 2500 미만
                                     } else if (randNum <= 700 - fishFloat * 3 && randNum > 500 - fishFloat * 2) {
@@ -413,7 +421,7 @@ public class FishingMain {
                                         bagMoney = bagMoney + fishList.get(fishNum).getPrice();
                                         System.out.println(fishList.get(fishNum).getName() + " 을(를) 잡았다!");
                                         bait--;
-                                        System.out.println("남은 미끼: " + bait + "개");
+                                        System.out.println("남은 떡밥: " + bait + "개");
 
                                         // 2500 이상 ~ 3000 미만
                                     } else if (randNum <= 870 - fishFloat * 4 && randNum > 700 - fishFloat * 3) {
@@ -422,7 +430,7 @@ public class FishingMain {
                                         bagMoney = bagMoney + fishList.get(fishNum).getPrice();
                                         System.out.println(fishList.get(fishNum).getName() + " 을(를) 잡았다!");
                                         bait--;
-                                        System.out.println("남은 미끼: " + bait + "개");
+                                        System.out.println("남은 떡밥: " + bait + "개");
 
                                         // 3000 이상 ~ 5000 미만
                                     } else if (randNum <= 980 - fishFloat * 5 && randNum > 870 - fishFloat * 4) {
@@ -431,35 +439,41 @@ public class FishingMain {
                                         bagMoney = bagMoney + fishList.get(fishNum).getPrice();
                                         System.out.println(fishList.get(fishNum).getName() + " 을(를) 잡았다!");
                                         bait--;
-                                        System.out.println("남은 미끼: " + bait + "개");
+                                        System.out.println("남은 떡밥: " + bait + "개");
 
                                         // 희귀 강 물고기
                                     } else if (randNum <= 1000 && randNum > 980 - fishFloat * 5) {
                                         System.out.print("저항이 거세다");
-                                        Thread.sleep(1000);
+                                        Thread.sleep(300);
                                         System.out.print(".");
-                                        Thread.sleep(1000);
+                                        Thread.sleep(300);
                                         System.out.print(".");
-                                        Thread.sleep(1000);
-                                        System.out.println(".");
+                                        Thread.sleep(300);
+                                        System.out.print(".");
+                                        Thread.sleep(300);
+                                        System.out.println("!");
                                         Thread.sleep(1000);
                                         fishNum = UtilClass.makeRandom(22, 26);
                                         fishBag.add(fishList.get(fishNum));
                                         bagMoney = bagMoney + fishList.get(fishNum).getPrice();
-                                        System.out.println(fishList.get(fishNum).getName() + " 을(를) 잡았다!");
+                                        System.out.println("[희귀] " + fishList.get(fishNum).getName() + " 을(를) 잡았다!");
+                                        Thread.sleep(300);
                                         bait--;
-                                        System.out.println("남은 미끼: " + bait + "개");
+                                        System.out.println("남은 떡밥: " + bait + "개");
+                                        Thread.sleep(300);
 
                                         // 낚시 실패 (낚싯대 10강시 randNum 최대값이 1000이 되므로 실패하지 않음)
                                     } else if (randNum <= 1100 && randNum > 1000) {
                                         System.out.println("물고기가 떡밥만 먹고 도망갔습니다...");
                                         bait--;
-                                        System.out.println("남은 미끼: " + bait + "개");
+                                        System.out.println("남은 떡밥: " + bait + "개");
+                                        Thread.sleep(1000);
                                     }
+                                    Thread.sleep(100);
 
                                     // 떡밥 없을 때 낚시 시도 시
                                 } else if (bait == 0) {
-                                    System.out.println("미끼가 없습니다...");
+                                    System.out.println("떡밥이 없습니다...");
                                     System.out.println("[1] 가방 확인 | [2] 나가기");
                                     select = Integer.parseInt(scan.nextLine());
 
@@ -471,7 +485,7 @@ public class FishingMain {
                                         }
                                         System.out.println("잡은 물고기: " + fishBag.size() + "마리");
                                         System.out.println("가방 내 물고기 총액: " + bagMoney + "원");
-                                        System.out.println("남은 미끼: " + bait + "개");
+                                        System.out.println("남은 떡밥: " + bait + "개");
                                         System.out.println("[1] 나가기.");
                                         select = Integer.parseInt(scan.nextLine());
                                         if (select == 1) {
@@ -482,18 +496,104 @@ public class FishingMain {
                                     }
                                 }
 
+                                // 자동 낚시 기능
+                            } else if (select == 2 && bait > 0) {
+                                // 떡밥가 다 떨어지면 자동 종료
+                                int baitNum = bait;
+                                for (int i = 0; i < baitNum; i++) {
+
+                                    int randNum = UtilClass.makeRandom(1, 1101 - rod * 10); // 낚싯대 +1강할 때 마다 실패 확률 10/1100 감소 => +10강 시 낚시를 실패하지 않음
+                                    int fishNum;
+
+                                    // 1000원 미만
+                                    if (randNum <= 250 - fishFloat) {
+                                        fishNum = UtilClass.makeRandom(0, 13);
+                                        fishBag.add(fishList.get(fishNum));
+                                        bagMoney = bagMoney + fishList.get(fishNum).getPrice();
+                                        System.out.println(fishList.get(fishNum).getName() + " 을(를) 잡았다!");
+                                        bait--;
+                                        System.out.println("남은 떡밥: " + bait + "개");
+
+                                        // 1000 이상 ~ 2000 미만
+                                    } else if (randNum <= 500 - fishFloat * 2 && randNum > 250 - fishFloat) {
+                                        fishNum = UtilClass.makeRandom(14, 16);
+                                        fishBag.add(fishList.get(fishNum));
+                                        bagMoney = bagMoney + fishList.get(fishNum).getPrice();
+                                        System.out.println(fishList.get(fishNum).getName() + " 을(를) 잡았다!");
+                                        bait--;
+                                        System.out.println("남은 떡밥: " + bait + "개");
+
+                                        // 2000 이상 ~ 2500 미만
+                                    } else if (randNum <= 700 - fishFloat * 3 && randNum > 500 - fishFloat * 2) {
+                                        fishNum = UtilClass.makeRandom(17, 17);
+                                        fishBag.add(fishList.get(fishNum));
+                                        bagMoney = bagMoney + fishList.get(fishNum).getPrice();
+                                        System.out.println(fishList.get(fishNum).getName() + " 을(를) 잡았다!");
+                                        bait--;
+                                        System.out.println("남은 떡밥: " + bait + "개");
+
+                                        // 2500 이상 ~ 3000 미만
+                                    } else if (randNum <= 870 - fishFloat * 4 && randNum > 700 - fishFloat * 3) {
+                                        fishNum = UtilClass.makeRandom(18, 19);
+                                        fishBag.add(fishList.get(fishNum));
+                                        bagMoney = bagMoney + fishList.get(fishNum).getPrice();
+                                        System.out.println(fishList.get(fishNum).getName() + " 을(를) 잡았다!");
+                                        bait--;
+                                        System.out.println("남은 떡밥: " + bait + "개");
+
+                                        // 3000 이상 ~ 5000 미만
+                                    } else if (randNum <= 980 - fishFloat * 5 && randNum > 870 - fishFloat * 4) {
+                                        fishNum = UtilClass.makeRandom(20, 21);
+                                        fishBag.add(fishList.get(fishNum));
+                                        bagMoney = bagMoney + fishList.get(fishNum).getPrice();
+                                        System.out.println(fishList.get(fishNum).getName() + " 을(를) 잡았다!");
+                                        bait--;
+                                        System.out.println("남은 떡밥: " + bait + "개");
+
+                                        // 희귀 강 물고기
+                                    } else if (randNum <= 1000 && randNum > 980 - fishFloat * 5) {
+                                        System.out.print("저항이 거세다");
+                                        Thread.sleep(300);
+                                        System.out.print(".");
+                                        Thread.sleep(300);
+                                        System.out.print(".");
+                                        Thread.sleep(300);
+                                        System.out.print(".");
+                                        Thread.sleep(300);
+                                        System.out.println("!");
+                                        Thread.sleep(1000);
+                                        fishNum = UtilClass.makeRandom(22, 26);
+                                        fishBag.add(fishList.get(fishNum));
+                                        bagMoney = bagMoney + fishList.get(fishNum).getPrice();
+                                        System.out.println("[희귀] " + fishList.get(fishNum).getName() + " 을(를) 잡았다!");
+                                        Thread.sleep(300);
+                                        bait--;
+                                        System.out.println("남은 떡밥: " + bait + "개");
+                                        Thread.sleep(300);
+
+                                        // 낚시 실패 (낚싯대 10강시 randNum 최대값이 1000이 되므로 실패하지 않음)
+                                    } else if (randNum <= 1100 && randNum > 1000) {
+                                        System.out.println("물고기가 떡밥만 먹고 도망갔습니다...");
+                                        bait--;
+                                        System.out.println("남은 떡밥: " + bait + "개");
+                                        Thread.sleep(1000);
+                                    }
+                                    Thread.sleep(300);
+                                }
+
+
                                 // 잡은 물고기 목록 보기
-                            } else if (select == 2) {
+                            } else if (select == 3) {
                                 System.out.println("내 가방");
                                 for (int i = 0; i < fishBag.size(); i++) {
                                     System.out.println(fishBag.get(i));
                                 }
                                 System.out.println("잡은 물고기: " + fishBag.size() + "마리");
                                 System.out.println("가방 내 물고기 총액: " + bagMoney + "원");
-                                System.out.println("남은 미끼: " + bait + "개");
+                                System.out.println("남은 떡밥: " + bait + "개");
 
-                            } else if (select == 3) {
-                                break;
+                            } else if (select == 4) {
+                                break river;
 
                             } else {
                                 System.out.println("잘못 입력하셨습니다.");
@@ -501,77 +601,89 @@ public class FishingMain {
 
                         }
 
-                    } // 민물 낚시터 종료
+                    } // 강 낚시터 종료
 
                     // 2 : 바다 낚시터 입장
                     else if (select == 2) {
                         System.out.println("바다 낚시터에 입장하셨습니다.");
-                        sea : while (true) {
-                            System.out.println("[1] 낚시하기 | [2] 가방 확인 | [3] 나가기");
+                        sea:
+                        while (true) {
+                            System.out.println("[1] 낚시하기 | [2] 자동 낚시 | [3] 가방 확인 | [4] 나가기");
                             System.out.print(">>> ");
                             select = Integer.parseInt(scan.nextLine());
+
                             if (select == 1) {
 
                                 if (bait > 0) {
+
                                     int randNum = UtilClass.makeRandom(1, 1100 - rod * 10); // 낚싯대 +1강할 때 마다 실패 확률 10/1100 감소 => +10강 시 낚시를 실패하지 않음
+                                    int fishNum;
 
                                     if (randNum <= 250 - fishFloat) { // 1000원 미만
-                                        int fishNum = UtilClass.makeRandom(27, 36);
+                                        fishNum = UtilClass.makeRandom(27, 36);
                                         fishBag.add(fishList.get(fishNum));
                                         bagMoney = bagMoney + fishList.get(fishNum).getPrice();
                                         System.out.println(fishList.get(fishNum).getName() + " 을(를) 잡았다!");
                                         bait--;
-                                        System.out.println("남은 미끼: " + bait);
+                                        System.out.println("남은 떡밥: " + bait);
                                     } else if (randNum <= 500 - fishFloat * 2 && randNum > 250 - fishFloat) { // 1000 이상 ~ 2000 미만
-                                        int fishNum = UtilClass.makeRandom(37, 41);
+                                        fishNum = UtilClass.makeRandom(37, 41);
                                         fishBag.add(fishList.get(fishNum));
                                         bagMoney = bagMoney + fishList.get(fishNum).getPrice();
                                         System.out.println(fishList.get(fishNum).getName() + " 을(를) 잡았다!");
                                         bait--;
-                                        System.out.println("남은 미끼: " + bait);
+                                        System.out.println("남은 떡밥: " + bait);
                                     } else if (randNum <= 700 - fishFloat * 3 && randNum > 500 - fishFloat * 2) { // 2000 이상 ~ 2500 미만
-                                        int fishNum = UtilClass.makeRandom(42, 42);
+                                        fishNum = UtilClass.makeRandom(42, 42);
                                         fishBag.add(fishList.get(fishNum));
                                         bagMoney = bagMoney + fishList.get(fishNum).getPrice();
                                         System.out.println(fishList.get(fishNum).getName() + " 을(를) 잡았다!");
                                         bait--;
-                                        System.out.println("남은 미끼: " + bait);
+                                        System.out.println("남은 떡밥: " + bait);
                                     } else if (randNum <= 870 - fishFloat * 4 && randNum > 700 - fishFloat * 3) { // 2500 이상 ~ 3500 미만
-                                        int fishNum = UtilClass.makeRandom(43, 45);
+                                        fishNum = UtilClass.makeRandom(43, 45);
                                         fishBag.add(fishList.get(fishNum));
                                         bagMoney = bagMoney + fishList.get(fishNum).getPrice();
                                         System.out.println(fishList.get(fishNum).getName() + " 을(를) 잡았다!");
                                         bait--;
-                                        System.out.println("남은 미끼: " + bait);
+                                        System.out.println("남은 떡밥: " + bait);
                                     } else if (randNum <= 980 - fishFloat * 5 && randNum > 870 - fishFloat * 4) { // 3500 이상 ~ 5000 미만
-                                        int fishNum = UtilClass.makeRandom(46, 46);
+                                        fishNum = UtilClass.makeRandom(46, 46);
                                         fishBag.add(fishList.get(fishNum));
                                         bagMoney = bagMoney + fishList.get(fishNum).getPrice();
                                         System.out.println(fishList.get(fishNum).getName() + " 을(를) 잡았다!");
                                         bait--;
-                                        System.out.println("남은 미끼: " + bait);
+                                        System.out.println("남은 떡밥: " + bait);
                                     } else if (randNum <= 1000 && randNum > 980 - fishFloat * 5) { // 희귀 바다 물고기
                                         System.out.print("저항이 거세다");
-                                        Thread.sleep(1000);
+                                        Thread.sleep(300);
                                         System.out.print(".");
-                                        Thread.sleep(1000);
+                                        Thread.sleep(300);
                                         System.out.print(".");
+                                        Thread.sleep(300);
+                                        System.out.print(".");
+                                        Thread.sleep(300);
+                                        System.out.println("!");
                                         Thread.sleep(1000);
-                                        System.out.println(".");
-                                        Thread.sleep(1000);
-                                        int fishNum = UtilClass.makeRandom(47, 60);
+                                        fishNum = UtilClass.makeRandom(47, 60);
                                         fishBag.add(fishList.get(fishNum));
                                         bagMoney = bagMoney + fishList.get(fishNum).getPrice();
-                                        System.out.println(fishList.get(fishNum).getName() + " 을(를) 잡았다!");
+                                        System.out.println("[희귀] " + fishList.get(fishNum).getName() + " 을(를) 잡았다!");
+                                        Thread.sleep(300);
                                         bait--;
-                                        System.out.println("남은 미끼: " + bait);
+                                        System.out.println("남은 떡밥: " + bait);
+                                        Thread.sleep(300);
+
                                     } else if (randNum <= 1100 && randNum > 1000) { // 낚시 실패
                                         System.out.println("물고기가 떡밥만 먹고 도망갔습니다...");
                                         bait--;
-                                        System.out.println("남은 미끼: " + bait);
+                                        System.out.println("남은 떡밥: " + bait);
+                                        Thread.sleep(1000);
                                     }
-                                } else if (bait == 0) { // 바다 낚시 미끼 없을 때
-                                    System.out.println("미끼가 없습니다...");
+                                    Thread.sleep(300);
+
+                                } else if (bait == 0) { // 바다 낚시 떡밥 없을 때
+                                    System.out.println("떡밥가 없습니다...");
                                     System.out.println("[1] 가방 확인 | [2] 나가기");
                                     System.out.print(">>> ");
                                     select = Integer.parseInt(scan.nextLine());
@@ -583,7 +695,7 @@ public class FishingMain {
                                         }
                                         System.out.println("잡은 물고기: " + fishBag.size() + "마리");
                                         System.out.println("가방 내 물고기 총액: " + bagMoney + "원");
-                                        System.out.println("남은 미끼: " + bait + "개");
+                                        System.out.println("남은 떡밥: " + bait + "개");
                                         System.out.println("[1] 나가기");
                                         System.out.print(">>> ");
                                         select = Integer.parseInt(scan.nextLine());
@@ -595,7 +707,94 @@ public class FishingMain {
                                     }
 
                                 }
-                            } else if (select == 2) { // 바다 가방 확인
+
+                            } else if (select == 2 && bait > 0) {
+
+                                // 떡밥가 다 떨어지면 자동 종료
+                                int baitNum = bait;
+                                for (int i = 0; i < baitNum; i++) {
+
+                                    int randNum = UtilClass.makeRandom(1, 1101 - rod * 10); // 낚싯대 +1강할 때 마다 실패 확률 10/1100 감소 => +10강 시 낚시를 실패하지 않음
+                                    int fishNum;
+
+                                    // 1000원 미만
+                                    if (randNum <= 250 - fishFloat) {
+                                        fishNum = UtilClass.makeRandom(27, 36);
+                                        fishBag.add(fishList.get(fishNum));
+                                        bagMoney = bagMoney + fishList.get(fishNum).getPrice();
+                                        System.out.println(fishList.get(fishNum).getName() + " 을(를) 잡았다!");
+                                        bait--;
+                                        System.out.println("남은 떡밥: " + bait + "개");
+
+                                        // 1000 이상 ~ 2000 미만
+                                    } else if (randNum <= 500 - fishFloat * 2 && randNum > 250 - fishFloat) {
+                                        fishNum = UtilClass.makeRandom(37, 41);
+                                        fishBag.add(fishList.get(fishNum));
+                                        bagMoney = bagMoney + fishList.get(fishNum).getPrice();
+                                        System.out.println(fishList.get(fishNum).getName() + " 을(를) 잡았다!");
+                                        bait--;
+                                        System.out.println("남은 떡밥: " + bait + "개");
+
+                                        // 2000 이상 ~ 2500 미만
+                                    } else if (randNum <= 700 - fishFloat * 3 && randNum > 500 - fishFloat * 2) {
+                                        fishNum = UtilClass.makeRandom(42, 42);
+                                        fishBag.add(fishList.get(fishNum));
+                                        bagMoney = bagMoney + fishList.get(fishNum).getPrice();
+                                        System.out.println(fishList.get(fishNum).getName() + " 을(를) 잡았다!");
+                                        bait--;
+                                        System.out.println("남은 떡밥: " + bait + "개");
+
+                                        // 2500 이상 ~ 3000 미만
+                                    } else if (randNum <= 870 - fishFloat * 4 && randNum > 700 - fishFloat * 3) {
+                                        fishNum = UtilClass.makeRandom(43, 45);
+                                        fishBag.add(fishList.get(fishNum));
+                                        bagMoney = bagMoney + fishList.get(fishNum).getPrice();
+                                        System.out.println(fishList.get(fishNum).getName() + " 을(를) 잡았다!");
+                                        bait--;
+                                        System.out.println("남은 떡밥: " + bait + "개");
+
+                                        // 3000 이상 ~ 5000 미만
+                                    } else if (randNum <= 980 - fishFloat * 5 && randNum > 870 - fishFloat * 4) {
+                                        fishNum = UtilClass.makeRandom(46, 46);
+                                        fishBag.add(fishList.get(fishNum));
+                                        bagMoney = bagMoney + fishList.get(fishNum).getPrice();
+                                        System.out.println(fishList.get(fishNum).getName() + " 을(를) 잡았다!");
+                                        bait--;
+                                        System.out.println("남은 떡밥: " + bait + "개");
+
+                                        // 희귀 바다 물고기
+                                    } else if (randNum <= 1000 && randNum > 980 - fishFloat * 5) {
+                                        System.out.print("저항이 거세다");
+                                        Thread.sleep(300);
+                                        System.out.print(".");
+                                        Thread.sleep(300);
+                                        System.out.print(".");
+                                        Thread.sleep(300);
+                                        System.out.print(".");
+                                        Thread.sleep(300);
+                                        System.out.println("!");
+                                        Thread.sleep(1000);
+                                        fishNum = UtilClass.makeRandom(47, 60);
+                                        fishBag.add(fishList.get(fishNum));
+                                        bagMoney = bagMoney + fishList.get(fishNum).getPrice();
+                                        System.out.println("[희귀] " + fishList.get(fishNum).getName() + " 을(를) 잡았다!");
+                                        Thread.sleep(300);
+                                        bait--;
+                                        System.out.println("남은 떡밥: " + bait + "개");
+                                        Thread.sleep(300);
+
+                                        // 낚시 실패 (낚싯대 10강시 randNum 최대값이 1000이 되므로 실패하지 않음)
+                                    } else if (randNum <= 1100 && randNum > 1000) {
+                                        System.out.println("물고기가 떡밥만 먹고 도망갔습니다...");
+                                        bait--;
+                                        System.out.println("남은 떡: " + bait + "개");
+                                        Thread.sleep(1000);
+                                    }
+                                    Thread.sleep(300);
+                                }
+
+
+                            } else if (select == 3) { // 바다 가방 확인
                                 System.out.println("내 가방");
                                 // 잡은 물고기 목록 보기
                                 for (int i = 0; i < fishBag.size(); i++) {
@@ -603,16 +802,18 @@ public class FishingMain {
                                 }
                                 System.out.println("잡은 물고기: " + fishBag.size() + "마리");
                                 System.out.println("가방 내 물고기 총액: " + bagMoney + "원");
-                                System.out.println("남은 미끼: " + bait + "개");
-                            } else if (select == 3) {
+                                System.out.println("남은 떡: " + bait + "개");
+
+                            } else if (select == 4) {
                                 break;
                             }
                         }
-                    } // 바다 낚시터 종료
-                    else {
+                        // 바다 낚시터 종료
+                    } else {
                         System.out.println("잘못 입력하셨습니다.");
                     }
                 }
+
             } else if (select == 2) {   // 장비 강화
 
                 // 낚싯대 강화
@@ -631,10 +832,7 @@ public class FishingMain {
 
                             String yn;
                             yn = String.valueOf(scan.nextLine());
-                            if (rod == 10) {
-                                System.out.println("더 이상 강화할 수 없습니다.");
-                                break;
-                            } else if (yn.equalsIgnoreCase("Y") && (myMoney - 10000 - (10000 * rod)) > 0) {   // 지갑의 돈이 강화비보다 많거나 같을 때 강화 가능
+                            if (!(rod == 10) && (myMoney - 10000 - (10000 * rod)) > 0 && yn.equalsIgnoreCase("Y")) {   // 지갑의 돈이 강화비보다 많거나 같을 때 강화 가능
                                 // 지갑에서 강화비만큼 빼고 rod = rod + 1 로 강화수치 증가
                                 myMoney = myMoney - 10000 - (10000 * rod);
                                 rod = rod + 1;
@@ -646,6 +844,9 @@ public class FishingMain {
                                 break;
                             } else if (yn.equalsIgnoreCase("Y") && (myMoney - 10000 - (10000 * rod)) < 0) {
                                 System.out.println("강화비가 부족합니다.");
+                            } else if (rod == 10) {
+                                System.out.println("더 이상 강화할 수 없습니다.");
+                                break;
                             }
                         }
 
@@ -660,10 +861,8 @@ public class FishingMain {
 
                             String yn;
                             yn = String.valueOf(scan.nextLine());
-                            if (fishFloat == 10) {
-                                System.out.println("더 이상 강화할 수 없습니다.");
-                                break;
-                            } else if (yn.equalsIgnoreCase("Y") && (myMoney - 10000 - (10000 * fishFloat)) > 0) {   // 지갑의 돈이 강화비보다 많거나 같을 때 강화 가능
+
+                            if (!(fishFloat == 10) && (myMoney - 10000 - (10000 * fishFloat)) > 0 && yn.equalsIgnoreCase("Y")) {   // 지갑의 돈이 강화비보다 많거나 같을 때 강화 가능
                                 // 지갑에서 강화비만큼 빼고 fishFloat = fishFloat + 1 로 강화수치 증가
                                 myMoney = myMoney - 10000 - (10000 * fishFloat);
                                 fishFloat = fishFloat + 1;
@@ -675,53 +874,67 @@ public class FishingMain {
                                 break;
                             } else if (yn.equalsIgnoreCase("Y") && (myMoney - 10000 - (10000 * fishFloat)) < 0) {
                                 System.out.println("강화비가 부족합니다.");
+                            } else if (fishFloat == 10) {
+                                System.out.println("더 이상 강화할 수 없습니다.");
+                                break;
                             }
                         }
 
                         // 강화 종료
                     } else if (select == 3) {
                         System.out.println("강화를 종료합니다.");
+
                         break;
                     }
 
 
                 }
 
-            } else if (select == 3) {   // 상점 (구매: 떡밥 / 판매: 가방 내 물고기(일괄))
-                System.out.println("상점");
-                System.out.println("[1] 떡밥 구매 | [2] 물고기 판매 | [3] 나가기");
-                System.out.print(">>> ");
-                select = Integer.parseInt(scan.nextLine());
-                // 구매 기능
-                if (select == 1) {  // 살 떡밥 개수를 입력하면 떡밥 가격 * 개수만큼 내 지갑에서 빠짐
-                    // 구매하고싶은 총액이 내 지갑금액보다 많으면 구매 불가
-                    System.out.println("떡밥(" + baitPrice + "원)");
-                    System.out.println("현재 잔액: " + myMoney + "원");
-                    System.out.println("구매 가능 떡밥 개수: " + (myMoney / baitPrice) + "개");
-                    System.out.println("구매할 개수를 입력해주세요.");
+            } else if (select == 3) {   // 상점 (구매: 떡 / 판매: 가방 내 물고기(일괄))
+
+                shop:
+                while (true) {
+                    System.out.println("상점");
+                    System.out.println("[1] 떡 구매 | [2] 물고기 판매 | [3] 나가기");
                     System.out.print(">>> ");
-                    baitBuyNum = Integer.parseInt(scan.nextLine());
-                    if ((baitBuyNum * baitPrice) <= myMoney) { // 구매 총액이 내 지갑금액보다 적으면 구매 가능
-                        // 대충 지갑에서 돈 빠지고 떡밥 충전하는 내용
-                        myMoney = myMoney - (baitBuyNum * baitPrice);
-                        bait = bait + baitBuyNum;
-                        System.out.println("남은 떡밥 개수:" + bait + "개");
+                    select = Integer.parseInt(scan.nextLine());
+                    // 구매 기능
+                    if (select == 1) {  // 살 떡 개수를 입력하면 떡 가격 * 개수만큼 내 지갑에서 빠짐
+                        // 구매하고싶은 총액이 내 지갑금액보다 많으면 구매 불가
+                        System.out.println("떡(" + baitPrice + "원)");
                         System.out.println("현재 잔액: " + myMoney + "원");
+                        System.out.println("구매 가능 떡 개수: " + (myMoney / baitPrice) + "개");
+                        System.out.println("구매할 개수를 입력해주세요.");
+                        System.out.print(">>> ");
+                        baitBuyNum = Integer.parseInt(scan.nextLine());
+                        if ((baitBuyNum * baitPrice) <= myMoney) { // 구매 총액이 내 지갑금액보다 적으면 구매 가능
+                            // 대충 지갑에서 돈 빠지고 떡 충전하는 내용
+                            myMoney = myMoney - (baitBuyNum * baitPrice);
+                            bait = bait + baitBuyNum;
+                            System.out.println("남은 떡 개수:" + bait + "개");
+                            System.out.println("현재 잔액: " + myMoney + "원");
+                        } else {
+                            System.out.println("잔액이 부족합니다.");
+                            System.out.println("현재 잔액: " + myMoney + "원");
+                        }
+
+                    } else if (select == 2) {   // 판매 기능
+                        for (int i = 0; i < fishBag.size(); i++) {
+                            sum += fishBag.get(i).getPrice();
+                        }
+                        myMoney = myMoney + sum;
+                        fishBag.clear();
+                        sum = 0;
+                        System.out.println("판매 완료");
+                        System.out.println("소지 금액: " + myMoney + "원");
+                    } else if (select == 3) {
+                        break shop;
                     } else {
-                        System.out.println("잔액이 부족합니다.");
-                        System.out.println("현재 잔액: " + myMoney + "원");
+                        System.out.println("잘못 입력하셨습니다.");
                     }
 
-                } else if (select == 2) {   // 판매 기능
-                    for (int i = 0; i < fishBag.size(); i++) {
-                        sum += fishBag.get(i).getPrice();
-                    }
-                    myMoney = myMoney + sum;
-                    fishBag.clear();
-                    sum = 0;
-                    System.out.println("판매 완료");
-                    System.out.println("소지 금액: " + myMoney + "원");
                 }
+
 
             } else if (select == 4) {   // 가방
                 System.out.println("내 가방");
