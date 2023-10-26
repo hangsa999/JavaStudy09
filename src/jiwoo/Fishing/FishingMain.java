@@ -1,4 +1,4 @@
-package jiwoo.submit11;
+package jiwoo.Fishing;
 
 import java.util.ArrayList;
 import java.util.Scanner;

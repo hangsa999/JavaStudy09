@@ -1,4 +1,4 @@
-package jiwoo.submit11;
+package jiwoo.Fishing;
 
 public class Fish {
     String name;

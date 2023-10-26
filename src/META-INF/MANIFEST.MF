@@ -1,3 +1,3 @@
 Manifest-Version: 1.0
-Main-Class: jiwoo.submit11.FishingMain
+Main-Class: jiwoo.Fishing.FishingMain
 
