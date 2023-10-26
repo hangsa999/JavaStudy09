@@ -32,8 +32,7 @@ public class DateBoardMain {
         SimpleDateFormat formatDate = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
 
 
-        System.out.println("날짜별로 정렬 후 출력(최신순)");
-
+        System.out.println("\n=========== 날짜별로 정렬 후 출력(최신순) ===========\n");
         for (int k = 0; k < dbList.size() - 1; k++) {
             for (int i = 0; i < dbList.size() - 1; i++) {
                 Date date1 = formatDate.parse(dbList.get(i).getDate());
@@ -51,8 +50,7 @@ public class DateBoardMain {
             System.out.println(dbList.get(i));
         }
 
-        System.out.println("");
-        System.out.println("날짜별로 정렬 후 출력(오래된 순)");
+        System.out.println("\n========== 날짜별로 정렬 후 출력(오래된 순) ==========\n");
         for (int k = 0; k < dbList.size() - 1; k++) {
             for (int i = 0; i < dbList.size() - 1; i++) {
                 Date date1 = formatDate.parse(dbList.get(i).getDate());
@@ -70,10 +68,7 @@ public class DateBoardMain {
             System.out.println(dbList.get(i));
         }
 
-        System.out.println("");
-        System.out.println("최근 한달 내 작성된 게시글");  // 오늘 기준 30일 전까지, 9.26 ~ 10.26
-
-
+        System.out.println("\n============= 최근 한달 내 작성된 게시글 =============\n");  // 오늘 기준 30일 전까지, 9.26 ~ 10.26
         // 이 부분은 date로 했는데 하루 차이가 날 수 있으니까 calendar로 해보기
         for (int k = 0; k < dbList.size() - 1; k++) {
             for (int i = 0; i < dbList.size() - 1; i++) {
@@ -106,10 +101,7 @@ public class DateBoardMain {
             }
         }
 
-
-
-        System.out.println("");
-        System.out.println("이번 달에 작성된 게시물");        // 10월
+        System.out.println("\n============== 이번 달에 작성된 게시물 ==============\n");        // 10월
         SimpleDateFormat sdfMonth = new SimpleDateFormat("MM");     // Date에서 몇월인지만 출력
         Date date = new Date();
         for (int k = 0; k < dbList.size() - 1; k++) {
@@ -133,7 +125,7 @@ public class DateBoardMain {
         }
 
         System.out.println("");
-        System.out.println("6월에 작성된 게시물");
+        System.out.println("\n================ 6월에 작성된 게시물 ================\n");
         for (int k = 0; k < dbList.size() - 1; k++) {
             for (int i = 0; i < dbList.size() - 1; i++) {
                 Date date1 = formatDate.parse(dbList.get(i).getDate());
@@ -155,7 +147,7 @@ public class DateBoardMain {
         }
 
         System.out.println("");
-        System.out.println("23년 7월 14일 ~ 23년 8월 21일 사이 작성된 게시물");
+        System.out.println("\n== 23년 7월 14일 ~ 23년 8월 21일 사이 작성된 게시물 ==\n");
         // String -> date -> 밀리초
         // 23년 7월 14일 00시 00분 밀리초 <= date 밀리초 < 23년 8월 22일 00시 00분 밀리초
         String startDay = "2023.07.14 00:00:00";
@@ -163,6 +155,29 @@ public class DateBoardMain {
 
         Date date230714 = formatDate.parse(startDay);
         Date date230822 = formatDate.parse(endDay);
+
+        long startMillSec = date230714.getTime();   // 23.07.14 00:00 밀리초
+        long endMillSec = date230822.getTime();   // 23.08.22 00:00 밀리초
+
+        for (int k = 0; k < dbList.size() - 1; k++) {
+            for (int i = 0; i < dbList.size() - 1; i++) {
+                Date date1 = formatDate.parse(dbList.get(i).getDate());
+                long num1 = date1.getTime();
+                Date date2 = formatDate.parse(dbList.get(i+1).getDate());
+                long num2 = date2.getTime();
+                if (num1 > num2) {
+                    DateBoard db = dbList.get(i);
+                    dbList.set(i, dbList.get(i + 1));
+                    dbList.set(i + 1, db);
+                }   // 내부 if문 종료
+            }   // 내부 for문 종료
+        }   // 외부 for문 종료
+        for (int i = 0; i < dbList.size(); i++) {
+            Date date1 = formatDate.parse(dbList.get(i).getDate());
+            if (startMillSec <= date1.getTime() && date1.getTime() < endMillSec) {
+                System.out.println(dbList.get(i));
+            }
+        }
 
 
 
