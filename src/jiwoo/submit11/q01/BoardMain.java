@@ -13,7 +13,6 @@ public class BoardMain {
 
         ArrayList boardList = new ArrayList();
 
-        int num = 0;
         String title = "";
         String date = "";
         String detail = "";
@@ -28,16 +27,15 @@ public class BoardMain {
                     System.out.println(boardList.get(i));
                 }
             } else if (select == 2) { // 글 쓰기
-                num = num + 1;
                 System.out.print("글 제목을 입력해주세요: ");
                 title = scan.nextLine();
                 System.out.print("글 내용을 입력해주세요: ");
                 detail = scan.nextLine();
-                Date nowDate = new Date();
                 SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd hh:mm:ss");
-                date = sdf.format(nowDate);
-                Board board = new Board(num, title, date, date);
+                Board board = new Board(boardList.size() + 1, title, sdf.format(new Date()), detail);
                 boardList.add(board);
+            } else {
+                break;
             }
 
 

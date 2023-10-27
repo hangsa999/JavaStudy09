@@ -29,17 +29,22 @@ public class DateBoardMain {
         // TODO 코드작성 시작 ~!!
         // System.out.println(dbList.get(0).getDate());    // 0번 인덱스 시간값(String)
         // System.out.println(dbList.size());              // dblist 리스트 갯수
-        SimpleDateFormat formatDate = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
 
+//        Collections.sort(dbList, (boardA, boardB));
+//        try {
+//
+//        };
+
+
+
+        SimpleDateFormat formatDate = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss");
 
         System.out.println("\n=========== 날짜별로 정렬 후 출력(최신순) ===========\n");
         for (int k = 0; k < dbList.size() - 1; k++) {
             for (int i = 0; i < dbList.size() - 1; i++) {
                 Date date1 = formatDate.parse(dbList.get(i).getDate());
-                long num1 = date1.getTime();
                 Date date2 = formatDate.parse(dbList.get(i+1).getDate());
-                long num2 = date2.getTime();
-                if (num1 < num2) {
+                if (date1.getTime() < date2.getTime()) {
                     DateBoard db = dbList.get(i);
                     dbList.set(i, dbList.get(i + 1));
                     dbList.set(i + 1, db);
@@ -54,10 +59,8 @@ public class DateBoardMain {
         for (int k = 0; k < dbList.size() - 1; k++) {
             for (int i = 0; i < dbList.size() - 1; i++) {
                 Date date1 = formatDate.parse(dbList.get(i).getDate());
-                long num1 = date1.getTime();
                 Date date2 = formatDate.parse(dbList.get(i+1).getDate());
-                long num2 = date2.getTime();
-                if (num1 > num2) {
+                if (date1.getTime() > date2.getTime()) {
                     DateBoard db = dbList.get(i);
                     dbList.set(i, dbList.get(i + 1));
                     dbList.set(i + 1, db);
@@ -73,10 +76,8 @@ public class DateBoardMain {
         for (int k = 0; k < dbList.size() - 1; k++) {
             for (int i = 0; i < dbList.size() - 1; i++) {
                 Date date1 = formatDate.parse(dbList.get(i).getDate());
-                long num1 = date1.getTime();
                 Date date2 = formatDate.parse(dbList.get(i+1).getDate());
-                long num2 = date2.getTime();
-                if (num1 > num2) {
+                if (date1.getTime() > date2.getTime()) {
                     DateBoard db = dbList.get(i);
                     dbList.set(i, dbList.get(i + 1));
                     dbList.set(i + 1, db);
@@ -101,38 +102,56 @@ public class DateBoardMain {
             }
         }
 
+        // 지난 달 같은 날(9.27~10.27) 국룰
+        long before30 = System.currentTimeMillis() - 30 * 24 * 60 * 60 * 1000;
+        System.out.println(before30);
+
+        // ㅁ?ㄹ
+//        Calendar cal = Calendar.getInstance();
+//        cal.add(Calendar.MONTH, -1);
+//
+//        System.out.println(sdf.format(cal.getTime()));
+//
+//        for (int i = 0; i < dbList.size(); i++) {
+//            Date temp = sdf.parse(dbList.get(i).getDate());
+//
+//        }
+
+
+
+
+
         System.out.println("\n============== 이번 달에 작성된 게시물 ==============\n");        // 10월
-        SimpleDateFormat sdfMonth = new SimpleDateFormat("MM");     // Date에서 몇월인지만 출력
-        Date date = new Date();
+        // 정렬
         for (int k = 0; k < dbList.size() - 1; k++) {
             for (int i = 0; i < dbList.size() - 1; i++) {
                 Date date1 = formatDate.parse(dbList.get(i).getDate());
-                long num1 = date1.getTime();
                 Date date2 = formatDate.parse(dbList.get(i+1).getDate());
-                long num2 = date2.getTime();
-                if (num1 > num2) {
+                if (date1.getTime() > date2.getTime()) {
                     DateBoard db = dbList.get(i);
                     dbList.set(i, dbList.get(i + 1));
                     dbList.set(i + 1, db);
                 }   // 내부 if문 종료
             }   // 내부 for문 종료
         }   // 외부 for문 종료
+
+        SimpleDateFormat sdfYearMonth = new SimpleDateFormat("yyyy.MM");     // Date에서 2023.10 출력
+        Date date = new Date();
         for (int i = 0; i < dbList.size(); i++) {
-            Date monthCheck = formatDate.parse(dbList.get(i).getDate());
-            if (sdfMonth.format(monthCheck).equals(sdfMonth.format(date))) {
+            Date Check = formatDate.parse(dbList.get(i).getDate());
+            if (sdfYearMonth.format(Check).equals(sdfYearMonth.format(date))) {
             System.out.println(dbList.get(i));
             }
         }
 
-        System.out.println("");
+
+
         System.out.println("\n================ 6월에 작성된 게시물 ================\n");
         for (int k = 0; k < dbList.size() - 1; k++) {
             for (int i = 0; i < dbList.size() - 1; i++) {
                 Date date1 = formatDate.parse(dbList.get(i).getDate());
-                long num1 = date1.getTime();
                 Date date2 = formatDate.parse(dbList.get(i+1).getDate());
-                long num2 = date2.getTime();
-                if (num1 > num2) {
+                if (date1.getTime() > date2.getTime()) {
                     DateBoard db = dbList.get(i);
                     dbList.set(i, dbList.get(i + 1));
                     dbList.set(i + 1, db);
@@ -140,11 +159,24 @@ public class DateBoardMain {
             }   // 내부 for문 종료
         }   // 외부 for문 종료
         for (int i = 0; i < dbList.size(); i++) {
-            Date monthCheck = formatDate.parse(dbList.get(i).getDate());
-            if (sdfMonth.format(monthCheck).equals("06")) {
+            Date monthCheck = sdfYearMonth.parse(dbList.get(i).getDate());
+            if (sdfYearMonth.format(monthCheck).equals("2023.06")) {
                 System.out.println(dbList.get(i));
             }
         }
+//        for (int i = 0;  i < dbList.size(); i++) {
+//            Date temp = sdf.parse(dbList.get(i).getDate());
+//
+//            Calendar tempCal = Calendar.getInstance();
+//            tempCal.setTime(temp);
+//
+//            if (tempCal.get(Calendar.MONTH)+1 == 6 && tempCal.get(Calendar.YEAR) == 2023) {
+//                System.out.println(dbList.get(i));
+//            }
+//        }
+
+
+
 
         System.out.println("");
         System.out.println("\n== 23년 7월 14일 ~ 23년 8월 21일 사이 작성된 게시물 ==\n");
@@ -158,14 +190,12 @@ public class DateBoardMain {
 
         long startMillSec = date230714.getTime();   // 23.07.14 00:00 밀리초
         long endMillSec = date230822.getTime();   // 23.08.22 00:00 밀리초
-
+        // 정렬
         for (int k = 0; k < dbList.size() - 1; k++) {
             for (int i = 0; i < dbList.size() - 1; i++) {
                 Date date1 = formatDate.parse(dbList.get(i).getDate());
-                long num1 = date1.getTime();
                 Date date2 = formatDate.parse(dbList.get(i+1).getDate());
-                long num2 = date2.getTime();
-                if (num1 > num2) {
+                if (date1.getTime() > date2.getTime()) {
                     DateBoard db = dbList.get(i);
                     dbList.set(i, dbList.get(i + 1));
                     dbList.set(i + 1, db);
