@@ -3,6 +3,7 @@ package jiwoo.submit12;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import org.json.simple.JSONArray;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -36,9 +37,8 @@ public class Submit12 {
                 }
             }
         }
-        JsonObject lowPrice = (JsonObject) records.get(0);          // 0번 도시 (냉면 가격이 제일 싼 도시)
-        System.out.print(lowPrice.get("시도명") + ", ");
-        System.out.println("냉면 가격: " + lowPrice.get("냉면"));    // 0번 도시의 냉면 가격 (오름차순 정렬이라 제일 싼 냉면 가격 출력)
+        JsonObject lowPrice = (JsonObject) records.get(0);           // 0번 도시 (냉면 가격이 제일 싼 도시)  toString / valueOf
+        System.out.println(lowPrice.get("시도명") + ", " + lowPrice.get("냉면") + "원");    // 0번 도시의 냉면 가격 (오름차순 정렬이라 제일 싼 냉면 가격 출력)
 
         System.out.println("\n======================= Q.01_2 =======================");
 
