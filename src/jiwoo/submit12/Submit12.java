@@ -62,8 +62,13 @@ public class Submit12 {
 
         System.out.println("\n======================= Q.03 =======================");
 
-        String food = "{ \"짜장면\", \"짬뽕\", \"볶음밥\", \"제육볶음\", \"라멘\", \"카레\", \"냉면\", \"삼겹살\" , \"라면\", \"햄버거\", \"된장찌개\", \"마라탕\", \"돼지국밥\", \"감자탕\", \"백반\", \"파스타\"}";
+        String food = "{ \"음식\" : [\"짜장면\", \"짬뽕\", \"볶음밥\", \"제육볶음\", \"라멘\", \"카레\", \"냉면\", \"삼겹살\" , \"라면\", \"햄버거\", \"된장찌개\", \"마라탕\", \"돼지국밥\", \"감자탕\", \"백반\", \"파스타\"]}";
         JsonParser foodParser = new JsonParser();
+        JsonObject foodList = (JsonObject) foodParser.parse(food);
+        System.out.println(foodList);
+        JsonArray arrayFood = (JsonArray) foodList.get("음식");
+        System.out.println(arrayFood.get(1)); // 1번 음식 이름 꺼내기
+        JsonArray test = new JsonArray();
 
 
 
