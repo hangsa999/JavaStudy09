@@ -6,7 +6,9 @@ import com.google.gson.JsonParser;
 import org.json.simple.JSONArray;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.Scanner;
 
 public class Submit12 {
 
@@ -62,16 +64,6 @@ public class Submit12 {
 
         System.out.println("\n======================= Q.03 =======================");
 
-        String food = "{ \"음식\" : [\"김치말이국수\", \"마파두부\", \"볶음밥\", \"제육볶음\", \"라멘\", \"카레\", \"비빔면\", \"삼겹살\" , \"라면\", \"햄버거\", \"된장찌개\", \"마라탕\", \"돼지국밥\", \"감자탕\", \"백반\", \"파스타\"]}";
-        JsonParser foodParser = new JsonParser();
-        JsonObject foodList = (JsonObject) foodParser.parse(food);
-        System.out.println(foodList);
-        JsonArray arrayFood = (JsonArray) foodList.get("음식");
-        System.out.println(arrayFood.get(1)); // 1번 음식 이름 꺼내기
-        JsonArray test = new JsonArray();
-
-
-
 
 
 
@@ -83,7 +75,7 @@ public class Submit12 {
         String dateString = date15.format(date);
         int randNum1;
         for (int i = 0; i < 6; i++) {
-            randNum1 = (int)(Math.random() * 9);
+            randNum1 = (int)(Math.random() * 10);
             dateString = dateString + randNum1;
         }
         // 메소드만 입력 시 바로 UUID가 나오게 하려면 여기에
