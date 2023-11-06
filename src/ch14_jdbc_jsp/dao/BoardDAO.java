@@ -1,6 +1,7 @@
 package ch14_jdbc_jsp.dao;
 
 import ch14_jdbc_jsp.dto.BoardDTO;
+import oracle.jdbc.proxy.annotation.Pre;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -134,7 +135,23 @@ public class BoardDAO {
         rs.close();
         ps.close();
 
-        return ???;
+        return board;
     }
+//
+//    // 글 삭제 메소드 (UPDATE)
+//    public int deleteBoard() {
+//        StringBuffer query = new StringBuffer();
+//        query.append("UPDATE             ");
+//        query.append("  boards           ");
+//        query.append("SET                ");
+//        query.append("  del_yn = 'Y'     ");
+//        query.append("WHERE 1=1          ");
+//        query.append("  AND bo_no = ?    ");
+//        query.append("  AND bo_id = ?    ");
+//
+//        PreparedStatement ps = conn.prepareStatement(query.toString());
+//
+//
+//    }
 
 }

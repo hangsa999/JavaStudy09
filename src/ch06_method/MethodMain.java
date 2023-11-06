@@ -1,6 +1,6 @@
 package ch06_method;
 
-public class MathodMain {
+public class MethodMain {
 
     public static void main(String[] args) {
         // 메소드 - method = 함수 = function

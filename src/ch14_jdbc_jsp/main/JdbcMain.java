@@ -130,6 +130,17 @@ public class JdbcMain {
 
                             // @ 글 삭제시 해당 게시글이 현재 로그인한 사람이 작성한
                             // 게시글이어야만 삭제 가능
+//                            BoardDTO board = new BoardDTO();
+//                            board.setBoNo(no);
+//                            board.setBoId(login.getMemId());
+//                            int rst = boardService.deleteBoard(board);
+//
+//                            if (rst == 1) {
+//                                System.out.println("글이 삭제되었습니다.");
+//                            } else {
+//                                System.out.println("글은 작성자만 삭제 가능합니다.");
+//                            }
+
 
                         } else if (select == 4) {
                             // 로그아웃

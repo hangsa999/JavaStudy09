@@ -54,18 +54,40 @@ public class BoardService {
     }
 
     // 글 보기
-    public BoardDTO getBoard(int boNo) {
+    public BoardDTO getBoard(int boNo){
         Connection conn = cp.getConnection();
+        BoardDTO result = new BoardDTO();
 
         try {
-            dao.getBoard(conn, boNo);
+            result = dao.getBoard(conn, boNo);
         } catch (SQLException e) {
             throw new RuntimeException(e);
-        } finally {
+        } finally{
             cp.releaseConnection(conn);
         }
 
-        return ???;
+        return result;
     }
+
+    // 글 삭제
+//    public void deleteBoard(BoardDTO board) {
+//        Connection conn = cp.getConnection();
+//        int result = 0;
+//
+//        try {
+//            result = dao.deleteBoard(conn, board);
+//        } catch (SQLException e) {
+//            throw new RuntimeException(e);
+//        } finally {
+//            cp.releaseConnection(conn);
+//        }
+//
+//        if (result == 1) {
+//            System.out.println("글이 삭제되었습니다.");
+//        } else {
+//            System.out.println("글은 작성자만 삭제 가능합니다.");
+//        }
+//
+//    }
 
 }
