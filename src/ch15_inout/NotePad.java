@@ -16,15 +16,13 @@ public class NotePad {
         Scanner scan = new Scanner(System.in);
 
         while (true) {
-            System.out.println("파일명");
-            System.out.print(">>> ");
-            String name = scan.nextLine();
-            System.out.println("내용");
-            System.out.print(">>> ");
-            String msg = scan.nextLine();
+            System.out.print("파일명 입력: ");
+            String fileName = scan.nextLine();
+            System.out.print("내용 입력: ");
+            String content = scan.nextLine();
 
-            try (FileWriter writer = new FileWriter("/home/pc33/stuList/" + name + ".txt");){
-                writer.write(msg);
+            try (FileWriter writer = new FileWriter("/home/pc33/stuList/" + fileName + ".txt");){
+                writer.write(content);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
