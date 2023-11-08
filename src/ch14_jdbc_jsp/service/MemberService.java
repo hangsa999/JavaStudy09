@@ -16,7 +16,7 @@ public class MemberService {
 
     private static MemberService instance = new MemberService();
 
-    public static MemberService getInstance(){
+    public static MemberService getInstance()   {
         return instance;
     }
 

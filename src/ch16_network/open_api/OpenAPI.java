@@ -1,4 +1,4 @@
-package ch16_network.open.api;
+package ch16_network.open_api;
 
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -75,6 +75,57 @@ public class OpenAPI {
             writer.write(body.toString());
         }
 
+        // 4677 개를 다 불러다 DB에 넣기
+        // (아마도 한번에 100개 이상 응답 못 받을 수 있음)
+        // (= 100개씩 47번 pageNo를 바꿔가며 요청하고 응답받아야 함)
+
     }
 
+    public static class MedicineDTO {
+        private String entpName;        /* 제조업체명 */
+        private String itemName;        /* 약 이름 */
+        private String efcyQesitm;      /* 약을 먹어야 하는 증상 */
+
+        public MedicineDTO() {
+        }
+
+        public MedicineDTO(String entpName, String itemName, String efcyQesitm) {
+            this.entpName = entpName;
+            this.itemName = itemName;
+            this.efcyQesitm = efcyQesitm;
+        }
+
+        @Override
+        public String toString() {
+            return "MedicineDTO{" +
+                    "entpName='" + entpName + '\'' +
+                    ", itemName='" + itemName + '\'' +
+                    ", efcyQesitm='" + efcyQesitm + '\'' +
+                    '}';
+        }
+
+        public String getEntpName() {
+            return entpName;
+        }
+
+        public void setEntpName(String entpName) {
+            this.entpName = entpName;
+        }
+
+        public String getItemName() {
+            return itemName;
+        }
+
+        public void setItemName(String itemName) {
+            this.itemName = itemName;
+        }
+
+        public String getEfcyQesitm() {
+            return efcyQesitm;
+        }
+
+        public void setEfcyQesitm(String efcyQesitm) {
+            this.efcyQesitm = efcyQesitm;
+        }
+    }
 }

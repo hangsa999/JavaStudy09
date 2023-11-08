@@ -1,4 +1,4 @@
-package ch16_network.open.api;
+package ch16_network.open_api;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -42,6 +42,8 @@ public class DataParsing {
 
         System.out.println(items.size());
 
+        MedicineService medicineService = MedicineService.getInstance();
+
         for (int i = 0; i < items.size(); i++) {
             JSONObject item = (JSONObject)items.get(i);
 
@@ -49,10 +51,22 @@ public class DataParsing {
             String itemName = (String)item.get("itemName");
             String efcyQesitm = (String)item.get("efcyQesitm");
 
-            MedicineDTO medicine = new MedicineDTO(entpName, itemName, efcyQesitm);
+            OpenAPI.MedicineDTO medicine = new OpenAPI.MedicineDTO(entpName, itemName, efcyQesitm);
 
             // 100개의 약을 데이터베이스에 저장
             MedicineService.insertMedicine(medicine);
+
+            // ConnectionPool 이 있기에 반복문에 DB 통신 코드를 박아도 괜찮음
+            // 만약 ConnectionPool이 없었다면? -> Thread.sleep()으로 실행시간에 텀을 준다.
+//            try {
+//                Thread.sleep(10);
+//            } catch (InterruptedException e) {
+//                throw new RuntimeException(e);
+//            }
+
+
+
+
         }
 
     }
